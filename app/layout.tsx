@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${figTree.className} relative bg-lime-200`}>
+      <body className={`${figTree.className} relative`}>
         <Navbar />
         <main className="relative overflow-hidden">{children}</main>
         <Footer />

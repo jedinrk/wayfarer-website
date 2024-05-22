@@ -29,7 +29,7 @@ function Navbar() {
   const logoSrc = useResponsiveImage(HomeLogoLarge, HomeLogoSmall);
 
   return (
-    <nav className="flex justify-start items-center py-[32px] px-[48px] bg-lime-200">
+    <nav className="relative flex justify-start items-center py-[32px] px-[48px]">
       {/* Logo */}
       <Link href="/" className="w-[334px] h-[58px]">
         <Image
@@ -54,7 +54,7 @@ function Navbar() {
         </ul>
 
         {/* Let's talk Button */}
-        <div className="sm:block">
+        <div className="sm:block z-20">
           <Button
             type={"submit"}
             title={"Let's Talk"} 

@@ -1,9 +1,10 @@
 import Button from "@/components/Button";
 import React from "react";
 
+
 function Banner() {
   return (
-    <div className="w-full h-[799px] pl-[125px] pt-[175px] bg-lime-200">
+    <div className="w-full h-[676px] pl-[125px] pt-[175px] bg-transparent">
       <h6 className="w-[579px] text-gray-800 text-base font-semibold font-['Montserrat'] tracking-wide">
         TRANSPORTATION SOLUTIONS
       </h6>

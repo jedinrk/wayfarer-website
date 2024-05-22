@@ -24,17 +24,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${figTree.className} relative bg-lime-200`}>
-      <Image
-          src={BannerBg}
-          alt="BannerBg"
-          className="absolute top-0 right-0 object-cover -z-20"
-        />
-        <Image
-          src={BannerImage}
-          alt="BannerImage"
-          className="absolute top-0 right-0 object-cover -z-10"
-        />
-
         <Navbar />
         <main className="relative overflow-hidden">{children}</main>
         <Footer />

@@ -1,4 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&family=Mate:ital@0;1&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    color: theme('colors.theme-text-900');
+  }
+  a {
+    &:hover {
+      color: theme('colors.theme-text-300');
+    }
+  }
+}
 

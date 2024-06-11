@@ -39,14 +39,14 @@ function Navbar() {
         />
       </Link>
 
-      <div className="flex w-full justify-between items-center pl-[67px]">
+      <div className="flex-1 flex justify-between items-center]">
         {/* Menu Items */}
-        <ul className="lg:flex hidden gap-12">
+        <ul className="lg:flex hidden">
           {NAV_LINKS.map((link) => (
             <Link
               href={link.href}
               key={link.key}
-              className="regular-16 cursor-pointer pb-1.5 transition-all hover:font-bold"
+              className=""
             >
               {link.label}
             </Link>
@@ -57,8 +57,8 @@ function Navbar() {
         <div className="sm:block">
           <Button
             type={"submit"}
-            title={"Let's Talk"} 
-            variant={""}          />
+            title={"Let's Talk"}
+            variant={""} />
         </div>
       </div>
 

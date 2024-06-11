@@ -9,8 +9,9 @@
     color: theme('colors.theme-text-900');
   }
   a {
+    font-weight: 600;
     &:hover {
-      color: theme('colors.theme-text-300');
+      color: theme('colors.theme-text-700');
     }
   }
 }

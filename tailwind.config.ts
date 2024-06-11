@@ -12,8 +12,9 @@ const config: Config = {
       serif: ['Mate', 'serif'],
     },
     extend: {
-      width: {
-        '320': '80rem'
+      spacing: {
+        '320': '77rem',
+        '340': '84rem'
       },
       colors: {
         'theme-100': '#EEF5E1',

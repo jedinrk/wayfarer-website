@@ -12,7 +12,6 @@ function Mission() {
           sustainable practices that prioritise green energy, power efficiency,
           and minimal environmental impact.
           <span className="ml-4 text-lime-300 text-lg font-semibold leading-loose">Know More...</span>
-
         </p>
       </div>
     </section>

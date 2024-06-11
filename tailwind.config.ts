@@ -14,6 +14,7 @@ const config: Config = {
       'theme-400': '#9AB23E',
       'theme-500': '#46731E',
       'theme-600': '#225219',
+      'theme-900': '#215218',
       'theme-text-300': '#ADD356',
       'theme-text-700': '#4B8200',
       'theme-text-900': '#0A1D06',
@@ -48,11 +49,6 @@ const config: Config = {
       }],
     },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
       width: {
         '320': '80rem'
       }

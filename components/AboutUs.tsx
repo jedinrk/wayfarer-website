@@ -86,7 +86,7 @@ function AboutUs() {
         <div className="flex flex-col">
           <div className="flex gap-x-10">
             <div className="flex flex-col max-w-[539px]">
-              <h1 className="uppercase">About Us</h1>
+              <h1 className="uppercase h6">About Us</h1>
               <h6 className="mt-4 text-gray-800 text-5xl font-medium leading-[64px]">
                 Wayfarer is leading the Charge Towards <br />
                 <span className="text-[#4B8200]">Sustainable Logistics</span>

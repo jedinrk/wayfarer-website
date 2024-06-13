@@ -42,8 +42,9 @@
     line-height: 1.66;
   }
   h6, .h6 {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.5;
+    letter-spacing: 0.16rem;
   }
 
   @media (min-width: 768px) {
@@ -62,9 +63,6 @@
     h5, .h5 {
       font-size: 1.44rem;
     }
-    h6, .h6 {
-      font-size: 1.2rem;
-    }
   }
   
   @media (min-width: 1024px) {
@@ -82,9 +80,6 @@
     }
     h5, .h5 {
       font-size: 1.5rem;
-    }
-    h6, .h6 {
-      font-size: 1.25rem;
     }
   }
 }

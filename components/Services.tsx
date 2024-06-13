@@ -13,7 +13,7 @@ function Services() {
     <section className="w-full px-[124px] py-[120px] bg-theme-700">
       <div className="w-full max-w-320 m-auto flex flex-col items-center">
         <div>
-          <h1 className="uppercase mb-[16px]">services</h1>
+          <h1 className="uppercase mb-[16px] text-theme-text-700 h6">services</h1>
           <div className="flex justify-between gap-[140px]">
             <h2 className="text-5xl mr-[40px]">
               Green, efficient & reliable logistics

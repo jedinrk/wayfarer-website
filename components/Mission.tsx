@@ -2,16 +2,17 @@ import React from "react";
 
 function Mission() {
   return (
-    <section className="w-full bg-theme-900 flex items-center">
-      <div className="flex">
-        <h1 className="opacity-70 text-white uppercase">
+    <section className="w-full pl-[124px] pr-[419px] py-[120px] bg-theme-900">
+      <div className="flex justify-between gap-[166px]">
+        <h1 className="opacity-70 text-[#FFFFFF] uppercase whitespace-nowrap">
           Our Mission
         </h1>
-        <p className="text-white text-2xl">
+        <p className="font-sans text-[#FFFFFF] text-2xl leading-10">
           We're on a mission to revolutionise container logistics through
           sustainable practices that prioritise green energy, power efficiency,
           and minimal environmental impact.
-          <span className="ml-4 text-lime-300 text-lg font-semibold leading-loose">Know More...</span>
+          <br/>
+          <span className="text-xl text-[#ADD356]">Know More...</span>
         </p>
       </div>
     </section>

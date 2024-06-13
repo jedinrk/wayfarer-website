@@ -1,6 +1,83 @@
 import React from "react";
 import Image from "next/image";
-import AboutUsBg from "../public/about-us-bg.png"
+import AboutUsBg from "../public/about-us-bg.png";
+import Members from "./Members";
+
+type Member = {
+  profileUrl: string;
+  name: string;
+  role: string;
+  linkedin: string;
+  twitter: string;
+  dribble: string;
+};
+const members: Member[] = [
+  {
+    profileUrl: "https://avatar.iran.liara.run/public/46",
+    name: "Arlene McCoy",
+    role: "Chief Executive Officer",
+    linkedin: "https://www.linkedin.com/in/naveenkravindran/",
+    twitter: "https://x.com/aqtis_io",
+    dribble: "https://dribbble.com/creativemints",
+  },
+  {
+    profileUrl: "https://avatar.iran.liara.run/public/46", // Replace with actual profile URL
+    name: "John Doe",
+    role: "Software Engineer",
+    linkedin: "https://www.linkedin.com/in/john-doe",
+    twitter: "https://twitter.com/john_doe",
+    dribble: "https://dribbble.com/john_doe",
+  },
+  {
+    profileUrl: "https://avatar.iran.liara.run/public/46", // Replace with actual profile URL
+    name: "Jane Doe",
+    role: "Designer",
+    linkedin: "https://www.linkedin.com/in/jane-doe",
+    twitter: "", // Optional social media link can be empty
+    dribble: "", // Optional social media link can be empty
+  },
+  // Add more objects following the same structure (replace placeholders with actual data)
+  {
+    profileUrl: "https://avatar.iran.liara.run/public/46", // Replace with actual profile URL
+    name: "Michael Smith",
+    role: "Marketing Manager",
+    linkedin: "https://www.linkedin.com/in/michael-smith",
+    twitter: "https://twitter.com/michael_mkt",
+    dribble: "", // Optional social media link can be empty
+  },
+  {
+    profileUrl: "https://avatar.iran.liara.run/public/46", // Replace with actual profile URL
+    name: "Emily Jones",
+    role: "Content Writer",
+    linkedin: "https://www.linkedin.com/in/emily-jones",
+    twitter: "", // Optional social media link can be empty
+    dribble: "", // Optional social media link can be empty
+  },
+  {
+    profileUrl: "https://avatar.iran.liara.run/public/46", // Replace with actual profile URL
+    name: "David Lee",
+    role: "Sales Representative",
+    linkedin: "https://www.linkedin.com/in/david-lee-sales",
+    twitter: "https://twitter.com/david_lee_sales",
+    dribble: "", // Optional social media link can be empty
+  },
+  {
+    profileUrl: "https://avatar.iran.liara.run/public/46", // Replace with actual profile URL
+    name: "Sarah Johnson",
+    role: "Human Resources",
+    linkedin: "https://www.linkedin.com/in/sarah-johnson-hr",
+    twitter: "", // Optional social media link can be empty
+    dribble: "", // Optional social media link can be empty
+  },
+  {
+    profileUrl: "https://avatar.iran.liara.run/public/46", // Replace with actual profile URL
+    name: "William Brown",
+    role: "Product Manager",
+    linkedin: "https://www.linkedin.com/in/william-brown-product",
+    twitter: "https://twitter.com/william_pm",
+    dribble: "", // Optional social media link can be empty
+  },
+];
 
 function AboutUs() {
   return (
@@ -33,10 +110,25 @@ function AboutUs() {
                 sustainable India together.
               </p>
             </div>
-            <Image src={AboutUsBg} alt={""} width={613} height={573.965}/>
+            <Image src={AboutUsBg} alt={""} width={613} height={573.965} />
           </div>
           <div className="mt-2">
-            <h2 className="font-sans text-4xl text-gray-800 leading-[44px]">Introducing our team</h2>
+            <h2 className="font-sans text-4xl text-gray-800 leading-[44px]">
+              Introducing our team
+            </h2>
+            <div className="flex mt-14 gap-x-8 overflow-hidden">
+              {members.map((member, index) => (
+                <Members
+                  key={index}
+                  profileUrl={member.profileUrl}
+                  name={member.name}
+                  role={member.role}
+                  linkedin={member.linkedin}
+                  twitter={member.twitter}
+                  dribble={member.dribble}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

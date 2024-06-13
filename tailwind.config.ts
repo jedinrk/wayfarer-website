@@ -26,6 +26,7 @@ const config: Config = {
         'theme-700': '#F3FAE6',
         'theme-800': '#D4E4BB',
         'theme-900': '#215218',
+        'theme-1000': '#FCF2E0',
         'theme-text-300': '#ADD356',
         'theme-text-700': '#4B8200',
         'theme-text-900': '#0A1D06',

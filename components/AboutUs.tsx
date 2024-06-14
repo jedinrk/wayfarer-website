@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import AboutUsBg from "../public/about-us-bg.png";
 import Members from "./Members";
+import NextBtn from "../public/btn-next.svg";
+import PreviousBtn from "../public/btn-previous.svg";
 
 type Member = {
   profileUrl: string;
@@ -116,7 +118,7 @@ function AboutUs() {
             <h2 className="font-sans text-4xl text-gray-800 leading-[44px]">
               Introducing our team
             </h2>
-            <div className="flex mt-14 gap-x-8 overflow-hidden">
+            <div className="flex mt-14 mb-12 gap-x-8 overflow-hidden">
               {members.map((member, index) => (
                 <Members
                   key={index}
@@ -128,6 +130,15 @@ function AboutUs() {
                   dribble={member.dribble}
                 />
               ))}
+            </div>
+            <div className="flex justify-between">
+              <div>
+                
+              </div>
+              <div className="flex gap-[15px]">
+                <Image src={PreviousBtn} alt={"Prev Button"} />
+                <Image src={NextBtn} alt={"Next Button"} />
+              </div>
             </div>
           </div>
         </div>

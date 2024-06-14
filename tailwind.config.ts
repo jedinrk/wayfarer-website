@@ -12,7 +12,12 @@ const config: Config = {
       serif: ['Mate', 'serif'],
     },
     extend: {
+      screens: {
+        xl: '1200px',
+        '2xl': '1440px'
+      },
       spacing: {
+        '300': '59rem',
         '320': '77rem',
         '340': '84rem'
       },

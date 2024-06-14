@@ -64,8 +64,26 @@
       font-size: 1.44rem;
     }
   }
-  
+
   @media (min-width: 1024px) {
+    h1, .h1 {
+      font-size: 3.75rem;
+    }
+    h2, .h2 {
+      font-size: 3rem;
+    }
+    h3, .h3 {
+      font-size: 2.1rem;
+    }
+    h4, .h4 {
+      font-size: 1.728rem;
+    }
+    h5, .h5 {
+      font-size: 1.44rem;
+    }
+  }
+  
+  @media (min-width: 1200px) {
     h1, .h1 {
       font-size: 4.75rem;
     }
@@ -92,6 +110,6 @@
         content: "";
       }
     /* } */
-}
+  }
 }
 

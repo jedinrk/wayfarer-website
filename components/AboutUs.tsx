@@ -112,7 +112,7 @@ function AboutUs() {
             </div>
             <Image src={AboutUsBg} alt={""} width={613} height={573.965} />
           </div>
-          <div className="mt-2">
+          <div className="mt-6">
             <h2 className="font-sans text-4xl text-gray-800 leading-[44px]">
               Introducing our team
             </h2>

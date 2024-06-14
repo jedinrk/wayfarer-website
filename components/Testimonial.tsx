@@ -21,25 +21,26 @@ const Testimonial: React.FC<{ testimony: Testimony }> = ({ testimony }) => {
   return (
     <div className="testimonial" id={`${testimony.id} testimony`}>
       <Rating rating={rating} />
-      <p className="text-gray-800 text-xl py-[32px] font-serif italic">
+      <p className="text-gray-800 text-[1.125rem] lg:text-xl py-[1.5em] font-serif italic">
         &quot;{content}&quot;
       </p>
       <div className="flex items-center">
-        <div className="flex border-r pr-20 gap-5">
+        <div className="flex items-center border-r border-gray-900 pr-5 gap-5">
           {profilePic && (
             <Image
               src={profilePic}
               alt={`${name}'s profile picture`}
               width={56}
               height={56}
+              className="h-14"
             />
           )}
-          <div className="flex flex-col">
-            <h5>{name}</h5>
-            <h6>{description}</h6>
+          <div className="">
+            <h5 className="text-lg font-bold leading-[1.3]">{name}</h5>
+            <h6 className="font-serif">{description}</h6>
           </div>
         </div>
-        <div className="px-[20px]">
+        <div className="pl-5">
           {logo && (
             <Image src={logo} alt={`${company} logo`} width={152} height={36} />
           )}

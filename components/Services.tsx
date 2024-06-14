@@ -11,9 +11,9 @@ import GreenArrowRight from "../public/gg_arrow-right.svg"
 function Services() {
   return (
     <section className="bg-theme-1000">
-      <div className="w-full max-w-320 m-auto px-4 md:px-5 py-12 md:py-20 xl:py-28 flex flex-col">
+      <div className="w-full max-w-320 m-auto px-4 md:px-5 py-14 md:py-20 xl:py-28 flex flex-col">
         <div>
-          <h2 className="uppercase mb-[1em] text-theme-text-700 h6">services</h2>
+          <h2 className="uppercase mb-[.5em] text-theme-text-700 h6">services</h2>
           <div className="flex flex-col lg:flex-row lg:justify-between">
             <h3 className="h2 mb-3 lg:mb-0">
               Green, efficient &<br /> reliable logistics

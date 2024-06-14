@@ -5,7 +5,7 @@ function Mission() {
   return (
     <section className="w-full bg-theme-900 relative overflow-hidden">
       <div className="w-full max-w-320 m-auto relative z-10">
-        <div className="flex flex-col gap-3 md:flex-row md:gap-8 lg:gap-40 px-4 md:px-5 py-12 md:py-20 xl:py-28 max-w-300">
+        <div className="flex flex-col gap-3 md:flex-row md:gap-8 lg:gap-40 px-4 md:px-5 py-14 md:py-20 xl:py-28 max-w-300">
           <h2 className="opacity-70 text-white uppercase whitespace-nowrap h6 md:pt-[.6em]">
             Our Mission
           </h2>

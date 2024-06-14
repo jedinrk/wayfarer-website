@@ -1,17 +1,16 @@
-import React from "react";
 import Testimonial, { Testimony } from "./Testimonial";
 
 const CustomerTestimonials: React.FC<{
   testimonies: Testimony[];
 }> = ({ testimonies }) => {
   return (
-    <section className="px-[124px] py-[120px]">
+    <section className="w-full max-w-320 m-auto px-4 md:px-5 py-14 md:py-20 xl:py-28 flex flex-col">
       <div className="w-full max-w-320 m-auto">
-        <h1 className="uppercase text-theme-text-700 h6">Customer testimonials</h1>
-        <h2 className="text-5xl w-1/2 mt-[24px]">
-          Client Stories: <br /> Our Impact in Action
-        </h2>
-        <div className="mt-[80px] flex justify-between gap-[64px]">
+        <h2 className="uppercase text-theme-text-700 h6 mb-[.5em]">Customer testimonials</h2>
+        <h3 className="h2">
+          Client Stories: <br />Our Impact in Action
+        </h3>
+        <div className="mt-8 md:mt-12 xl:mt-20 flex justify-between gap-[64px]">
           {testimonies.map((testimony, index) => (
             <Testimonial key={index} testimony={testimony} />
           ))}

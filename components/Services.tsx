@@ -10,15 +10,15 @@ import GreenArrowRight from "../public/gg_arrow-right.svg"
 
 function Services() {
   return (
-    <section className="w-full px-[124px] py-[120px] bg-theme-1000">
-      <div className="w-full max-w-320 m-auto flex flex-col items-center">
+    <section className="bg-theme-1000">
+      <div className="w-full max-w-320 m-auto px-4 md:px-5 py-12 md:py-20 xl:py-28 flex flex-col">
         <div>
-          <h1 className="uppercase mb-[16px] text-theme-text-700 h6">services</h1>
-          <div className="flex justify-between gap-[140px]">
-            <h2 className="text-5xl mr-[40px]">
-              Green, efficient & reliable logistics
-            </h2>
-            <p className="ml-[40px] max-w-[477px]">
+          <h2 className="uppercase mb-[1em] text-theme-text-700 h6">services</h2>
+          <div className="flex flex-col lg:flex-row lg:justify-between">
+            <h3 className="h2 mb-3 lg:mb-0">
+              Green, efficient &<br /> reliable logistics
+            </h3>
+            <p className="max-w-[477px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique. Duis cursus,
               mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
@@ -94,16 +94,12 @@ function Services() {
             </div>
           </div>
         </div>
-        <div className="w-[198px] h-16 px-8 py-3 bg-white rounded-[44px] border border-lime-700 justify-center items-center inline-flex">
-          <div className="px-2 py-1 justify-center items-center gap-2 flex">
-            <div className="text-lime-700 text-xl font-semibold leading-loose tracking-tight">
-              Let’s Talk
-            </div>
-          </div>
+        <button className="text-lime-700 font-semibold self-center w-fit px-8 py-2 rounded-[44px] border border-lime-700 flex justify-center items-center gap-2">
+          Let’s Talk
           <div className="w-8 h-8 relative">
             <Image src={GreenArrowRight} alt={"Green Arrow Right"} />
           </div>
-        </div>
+        </button>
       </div>
     </section>
   );

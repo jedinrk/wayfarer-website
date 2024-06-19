@@ -1,7 +1,10 @@
+import { useState, useEffect } from 'react';
 import Image from 'next/image'
 import BgPattern from '../public/Layer_1.png';
 
 function Mission() {
+  const [expanded, setExpanded] = useState(false)
+
   return (
     <section className="w-full bg-theme-900 relative overflow-hidden">
       <div className="w-full max-w-320 m-auto relative z-10">
@@ -12,8 +15,12 @@ function Mission() {
           <p className="text-white text-[1.25rem] md:text-2xl leading-[1.66]">
             We&apos;re on a mission to revolutionise container logistics through
             sustainable practices that prioritise green energy, power
-            efficiency, and minimal environmental impact.
-            <span className="text-xl text-[#ADD356]"> Know More...</span>
+            efficiency, and minimal environmental impact.&nbsp;
+            {!expanded ?
+              <button className="text-xl text-[#ADD356]" onClick={() => setExpanded(true)}>Know More...</button>
+              : `We&apos;re on a mission to revolutionise container logistics through
+            sustainable practices that prioritise green energy, power
+            efficiency, and minimal environmental impact.`}
           </p>
         </div>
       </div>
@@ -26,7 +33,8 @@ function Mission() {
         sizes="100vw"
         style={{
           objectFit: 'cover',
-          top: '30%'
+          top: '30%',
+          mixBlendMode: 'plus-lighter'
         }}
       />
     </section>

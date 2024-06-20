@@ -1,4 +1,4 @@
-import Image from "next/image";
+"use client"
 import Banner from "../components/Banner";
 import Mission from "../components/Mission";
 import Services from "@/components/Services";

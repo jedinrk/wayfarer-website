@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import LinkedinIcon from "../public/linkedin-member.svg";
 import XIcon from "../public/x-member.svg";
 import DribbleIcon from "../public/Dribble.svg";
@@ -23,48 +24,35 @@ function Members({
   twitter,
   dribble,
 }: MemberProps) {
-  const handleClick = (socialMedia: string) => {
-    switch (socialMedia) {
-      case "linkedin":
-        window.location.href = linkedin ? linkedin : "";
-        break;
-      case "twitter":
-        window.location.href = twitter ? twitter : "";
-        break;
-      case "dribble":
-        window.location.href = dribble ? dribble : "";
-        break;
-      default:
-        break;
-    }
-  };
-
   return (
-    <div className="flex flex-col min-w-[320px] min-h-[249px]">
-      <Image src={profileUrl} alt={""} width={120} height={120} />
-      <div className="mt-6 text-gray-800 text-xl font-semibold">{name}</div>
-      <div className="mb-6 text-gray-800 text-lg font-normal">{role}</div>
-      <div className="flex">
+    <div className="flex flex-col min-w-72">
+      <Image src={profileUrl} alt={""} width={120} height={120} className="mb-6" />
+      <div className="text-xl font-semibold">{name}</div>
+      <p className="font-serif text-lg mb-6">{role}</p>
+      <div className="flex gap-3">
         {linkedin && (
-          <Image
-            src={LinkedinIcon}
-            alt={"LinkedinIcon"}
-            onClick={() => handleClick("linkedin")}
-          />
+          <Link href={linkedin} title="Click to view LinkedIn profile">
+            <Image
+              src={LinkedinIcon}
+              alt=""
+            />
+          </Link>
         )}
         {twitter && (
-          <Image
-            src={XIcon}
-            alt={"XIcon"}
-            onClick={() => handleClick("twitter")}
-          />
+          <Link href={twitter} title="Click to view Twitter profile">
+            <Image
+              src={XIcon}
+              alt=""
+            />
+          </Link>
         )}
         {dribble && (
-          <Image
-            src={DribbleIcon}
-            alt={"DribbleIcon"}
-            onClick={() => handleClick("dribble")}
-          />
+          <Link href={dribble} title="Click to view DribbleIcon profile">
+            <Image
+              src={DribbleIcon}
+              alt=""
+            />
+          </Link>
         )}
       </div>
     </div>

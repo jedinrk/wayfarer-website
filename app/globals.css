@@ -1,4 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&family=Mate:ital@0;1&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    color: theme('colors.theme-text-900');
+  }
+
+  a {
+    font-weight: 600;
+    &:hover {
+      color: theme('colors.theme-text-700');
+    }
+  }
+
+  h1, .h1 {
+    font-size: 2.027rem;
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -.01em;
+  }
+  h2, .h2 {
+    font-size: 1.802rem;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+  h3, .h3 {
+    font-size: 1.602rem;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+  h4, .h4 {
+    font-size: 1.424rem;
+    line-height: 1.14;
+    font-weight: 600;
+  }
+  h5, .h5 {
+    font-size: 1.266rem;
+    line-height: 1.66;
+  }
+  h6, .h6 {
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.16rem;
+  }
+
+  @media (min-width: 768px) {
+    h1, .h1 {
+      font-size: 2.986rem;
+    }
+    h2, .h2 {
+      font-size: 2.488rem;
+    }
+    h3, .h3 {
+      font-size: 2.074rem;
+    }
+    h4, .h4 {
+      font-size: 1.728rem;
+    }
+    h5, .h5 {
+      font-size: 1.44rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h1, .h1 {
+      font-size: 3.75rem;
+    }
+    h2, .h2 {
+      font-size: 3rem;
+    }
+    h3, .h3 {
+      font-size: 2.1rem;
+    }
+    h4, .h4 {
+      font-size: 1.728rem;
+    }
+    h5, .h5 {
+      font-size: 1.44rem;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    h1, .h1 {
+      font-size: 4.75rem;
+    }
+    h2, .h2 {
+      font-size: 3.25rem;
+    }
+    h3, .h3 {
+      font-size: 2.25rem;
+    }
+    h4, .h4 {
+      font-size: 1.75rem;
+    }
+    h5, .h5 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@layer components {
+  .banner-inner {
+    position: relative;
+    /* @media (min-width: 1024px) { */
+      &::after {
+        content: "";
+      }
+    /* } */
+  }
+}
 

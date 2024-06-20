@@ -1,21 +1,19 @@
-import Button from "@/components/Button";
 import React from "react";
-
+import Image from "next/image";
+import Button from "@/components/Button";
+import BannerImage from '../public/banner-image.png'
+import BannerRightBg from "../public/banner-right-bg.png"
 
 function Banner() {
   return (
-    <section className="w-full h-[676px] pl-[125px] pt-[175px] bg-lime-200">
-      <h1 className="w-[579px] text-gray-800 text-base font-semibold font-['Montserrat'] tracking-wide">
-        TRANSPORTATION SOLUTIONS
-      </h1>
-      <div className="w-[579px]">
-        <h2 className="text-gray-800 text-[76px] font-semibold font-['Figtree'] leading-[80px]">
-          Sustainable logistics for a{" "}
-        </h2>
-        <h3 className="text-lime-700 text-[76px] font-semibold font-['Figtree'] leading-[80px]">
-          greener future
-        </h3>
-        <div className="mt-[32px]">
+    <section className="w-full md:h-[50vw] lg:h-[49vw] xl:h-[49vw] xl:max-h-[55rem] pt-[90px] pb-[74.66vw] md:pb-0 bg-gradient-to-r from-theme-200 to-theme-1100 relative">
+      <div className="relative z-10 w-full max-w-320 md:h-full p-4 md:p-5 md:pb-8 m-auto flex banner-inner">
+        <div className="flex flex-col justify-center">
+          <span className="block">TRANSPORTATION SOLUTIONS</span>
+          <h1 className="mb-[.44em] w-[33rem]">
+            Sustainable<br />logistics for a
+            <span className="block text-theme-text-700">greener future</span>
+          </h1>
           <Button
             type={"submit"}
             title={"Let's Talk"}
@@ -23,6 +21,7 @@ function Banner() {
           />
         </div>
       </div>
+      <Image src={BannerImage} alt="" className="absolute bottom-0 object-contain md:right-0 md:h-full md:w-[69vw] lg:w-[66vw] xl:w-[69vw] xl:max-h-[55rem]" />
     </section>
   );
 }

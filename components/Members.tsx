@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import LinkedinIcon from "../public/linkedin-member.svg";
 import XIcon from "../public/x-member.svg";
-import DribbleIcon from "../public/Dribble.svg";
+import DribbleIcon from "../public/dribble.svg";
 
 interface MemberProps {
   profileUrl: string;

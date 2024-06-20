@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 import AboutUsW from "../public/W-full.png";
 import AboutUsWTrans from "../public/W-transparent.png";
 import MapBg from "../public/map-bg.png";
@@ -125,17 +127,31 @@ function AboutUs() {
         <div className="">
           <h3 className="mb-[.8em]">Introducing our team</h3>
           <div className="flex gap-x-8 overflow-hidden">
-            {members.map((member, index) => (
-              <Members
-                key={index}
-                profileUrl={member.profileUrl}
-                name={member.name}
-                role={member.role}
-                linkedin={member.linkedin}
-                twitter={member.twitter}
-                dribble={member.dribble}
-              />
-            ))}
+            <Swiper
+              spaceBetween={24}
+              slidesPerView={window.innerWidth / 336}
+              breakpoints={{
+                1233: {
+                  slidesPerView: 4,
+                  spaceBetween: 32,
+                },
+              }}
+              onSlideChange={() => console.log('slide change')}
+              onSwiper={(swiper) => console.log(swiper)}
+            >
+              {members.map((member) => (
+                <SwiperSlide key={member.name}>
+                  <Members
+                    profileUrl={member.profileUrl}
+                    name={member.name}
+                    role={member.role}
+                    linkedin={member.linkedin}
+                    twitter={member.twitter}
+                    dribble={member.dribble}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>

@@ -24,9 +24,8 @@ function Members({
   twitter,
   dribble,
 }: MemberProps) {
-
   return (
-    <div className="flex flex-col min-w-[320px] min-h-[249px]">
+    <div className="flex flex-col min-w-72">
       <Image src={profileUrl} alt={""} width={120} height={120} className="mb-6" />
       <div className="text-xl font-semibold">{name}</div>
       <p className="font-serif text-lg mb-6">{role}</p>

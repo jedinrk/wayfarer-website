@@ -143,7 +143,7 @@ function AboutUs() {
           <div className="flex gap-x-8 overflow-hidden">
             <Swiper
               spaceBetween={24}
-              slidesPerView={window.innerWidth / 336}
+              slidesPerView={4}
               breakpoints={{
                 1233: {
                   slidesPerView: 4,
@@ -176,7 +176,7 @@ function AboutUs() {
           </div>
         </div>
       </div>
-      <Image src={MapBg} alt={""} className="absolute bottom-0 w-full" />
+      {/* <Image src={MapBg} alt={""} className="absolute bottom-0 w-full z-0" /> */}
     </section>
   );
 }

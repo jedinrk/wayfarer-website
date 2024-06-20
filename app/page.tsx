@@ -5,6 +5,7 @@ import Services from "@/components/Services";
 import CustomerTestimonials from "@/components/CustomerTestimonials";
 import AboutUs from "@/components/AboutUs";
 import { Testimony } from "@/components/Testimonial";
+import ContactUs from "@/components/ContactUs";
 
 const testimonies: Testimony[] = [
   {
@@ -38,6 +39,7 @@ export default function Home() {
       <Services />
       <CustomerTestimonials testimonies={testimonies} />
       <AboutUs />
+      <ContactUs />
     </>
   );
 }

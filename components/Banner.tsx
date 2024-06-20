@@ -21,7 +21,7 @@ function Banner() {
           />
         </div>
       </div>
-      <Image src={"/banner-image.png"} alt="" className="absolute bottom-0 object-contain md:right-0 md:h-full md:w-[69vw] lg:w-[66vw] xl:w-[69vw] xl:max-h-[55rem]" />
+      <Image src={`/banner-image.png`} alt="" className="absolute bottom-0 object-contain md:right-0 md:h-full md:w-[69vw] lg:w-[66vw] xl:w-[69vw] xl:max-h-[55rem]" />
     </section>
   );
 }

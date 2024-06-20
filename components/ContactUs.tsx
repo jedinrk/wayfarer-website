@@ -159,8 +159,8 @@ function ContactUs() {
       <div className="w-full max-w-320 m-auto px-4 md:px-5 py-14 md:py-20 xl:py-28">
         <div className="lg:flex md:flex-row gap-8">
           <div className="lg:flex-1">
-            <h2 className="uppercase mb-[.5em] h6 ">Contact Us</h2>
-            <h3 className="h2 mb-6 ">
+            <h2 className="uppercase mb-[.5em] text-theme-text-700 h6">Contact Us</h2>
+            <h3 className="h2 mb-6">
               Our friendly team would love to hear from you.
             </h3>
             <div className="flex flex-col gap-4">
@@ -172,11 +172,12 @@ function ContactUs() {
                 <Image src={IconPhone} alt={"IconPhone"} />
                 <label>+91 9746710770</label>
               </div>
-              <div className="flex gap-4">
+              <div className="flex gap-4 items-start">
                 <Image src={IconPin} alt={"IconPin"} />
                 <label>
-                  GROUND FLOOR, 14/153, VAZHAKKOOTTATHIL BUILDING, Azheekkal,
-                  Vypin, Kerala, 682508
+                  Groud Floor, 14/153, 
+                  <br/>Vazhakkoottathil Building, Azheekkal,
+                  <br/>Vypin, Kerala, 682508
                 </label>
               </div>
               <Image src={BgTrackForest} alt={""} className="w-full" />

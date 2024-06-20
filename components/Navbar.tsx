@@ -29,7 +29,7 @@ function Navbar() {
   const logoSrc = useResponsiveImage(HomeLogoLarge, HomeLogoSmall);
 
   return (
-    <div className="absolute z-10 w-full px-8 py-4">
+    <div className="absolute z-10 w-full px-8 py-14">
       <nav className="flex justify-between items-center w-full m-auto">
         {/* Logo */}
         <Link href="/" className="md:w-[334px] md:h-[58px]">

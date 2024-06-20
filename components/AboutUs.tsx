@@ -97,23 +97,23 @@ function AboutUs() {
               <span className="text-theme-text-700">Sustainable Logistics</span>
             </h3>
             <p className="font-sans text-lg mb-[1.333em]">
-              Greening India's Future with Wayfarer Logistics World trade
-              propels global prosperity, yet it's time we reshape how it's done
-              — trading on nature's terms. As one of the world's foremost
+              Greening India&apos;s Future with Wayfarer Logistics World trade
+              propels global prosperity, yet it&apos;s time we reshape how it&apos;s done
+              — trading on nature&apos;s terms. As one of the world&apos;s foremost
               transport and logistics companies, we bear a profound
-              responsibility for India's green transition.
+              responsibility for India&apos;s green transition.
             </p>
             <p className="font-sans text-lg">
-              At Wayfarer Logistics, we're already reducing CO2 emissions with
+              At Wayfarer Logistics, we&apos;re already reducing CO2 emissions with
               our core services: consolidation, mode shift, and load
               optimisation. However, safeguarding our climate demands more.
               Enter Green Logistics—an array of solutions from CO2 reporting to
               supply chain optimisation, sustainable warehousing, eco-friendly
               fuels, and carbon offsetting. Each solution meticulously crafted
-              to shrink your supply chain's carbon footprint.Join forces with
+              to shrink your supply chain&apos;s carbon footprint.Join forces with
               our team of experts to collaboratively design, implement, and
               personalise sustainable solutions tailored for your business and
-              the environment. Let's pave the way for a greener, more
+              the environment. Let&apos;s pave the way for a greener, more
               sustainable India together.
             </p>
             <div className="lg:hidden absolute right-0 top-0 h-full">

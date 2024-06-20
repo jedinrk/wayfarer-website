@@ -4,7 +4,7 @@ const CustomerTestimonials: React.FC<{
   testimonies: Testimony[];
 }> = ({ testimonies }) => {
   return (
-    <section className="w-full max-w-320 m-auto px-4 md:px-5 py-14 md:py-20 xl:py-28 flex flex-col">
+    <section id="testimonials" className="w-full max-w-320 m-auto px-4 md:px-5 py-14 md:py-20 xl:py-28 flex flex-col">
       <div className="w-full max-w-320 m-auto">
         <h2 className="uppercase text-theme-text-700 h6 mb-[.5em]">Customer testimonials</h2>
         <h3 className="h2">

@@ -155,7 +155,7 @@ const FormComponent = () => {
 
 function ContactUs() {
   return (
-    <section className="w-full">
+    <section id="contact-us" className="w-full">
       <div className="w-full max-w-320 m-auto px-4 md:px-5 py-14 md:py-20 xl:py-28">
         <div className="lg:flex md:flex-row gap-8">
           <div className="lg:flex-1">

@@ -10,7 +10,7 @@ import GreenArrowRight from "../public/gg_arrow-right.svg"
 
 function Services() {
   return (
-    <section className="bg-theme-1000">
+    <section id="services" className="bg-theme-1000">
       <div className="w-full max-w-320 m-auto px-4 md:px-5 py-14 md:py-20 xl:py-28 flex flex-col">
         <div>
           <h2 className="uppercase mb-[.5em] text-theme-text-700 h6">services</h2>

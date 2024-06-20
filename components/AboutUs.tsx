@@ -87,7 +87,7 @@ const members: Member[] = [
 
 function AboutUs() {
   return (
-    <section className="w-full bg-theme-800">
+    <section id="about-us" className="w-full bg-theme-800">
       <div className="w-full max-w-320 m-auto px-4 md:px-5 py-14 md:py-20 xl:py-28 relative z-10">
         <div className="lg:flex relative mb-8">
           <div className="max-lg:relative lg:flex-1">

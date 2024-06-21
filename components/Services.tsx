@@ -1,19 +1,21 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import ContainerTransport from "../public/container-transport.jpg";
 import RefrigatedContainer from "../public/refrigated-container-transport.jpg";
 import HeavyMachinery from "../public/heavy-machinery.jpg";
 import ContainerSale from "../public/container-sale.jpg";
 import BulkCargo from "../public/bulk-cargo.jpg";
 import ProjectCargo from "../public/project-cargo.jpg";
-import GreenArrowRight from "../public/gg_arrow-right.svg"
+import GreenArrowRight from "../public/gg_arrow-right.svg";
 
 function Services() {
   return (
     <section id="services" className="bg-theme-1000">
       <div className="w-full max-w-320 m-auto px-4 md:px-5 py-14 md:py-20 xl:py-28 flex flex-col">
         <div>
-          <h2 className="uppercase mb-[.5em] text-theme-text-700 h6">services</h2>
+          <h2 className="uppercase mb-[.5em] text-theme-text-700 h6">
+            services
+          </h2>
           <div className="flex flex-col lg:flex-row lg:justify-between">
             <h3 className="h2 mb-3 lg:mb-0">
               Green, efficient &<br /> reliable logistics
@@ -27,8 +29,11 @@ function Services() {
           </div>
         </div>
         <div className="flex flex-col w-full py-[56px] gap-y-8">
-          <div id="rowOne" className="flex gap-x-8">
-            <div className="relative w-[478px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl shadow-md overflow-hidden hover:shadow-stone-600">
+          <div
+            id="rowOne"
+            className="flex flex-col md:flex-row gap-y-8 md:gap-y-0 md:gap-x-8"
+          >
+            <div className="relative w-full md:w-[478px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl shadow-md overflow-hidden hover:shadow-stone-600">
               <Image
                 src={ContainerTransport}
                 alt=""
@@ -38,7 +43,7 @@ function Services() {
                 Container Transporting
               </div>
             </div>
-            <div className="relative w-[682px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl shadow-md overflow-hidden hover:shadow-stone-600">
+            <div className="relative w-full md:w-[682px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl shadow-md overflow-hidden hover:shadow-stone-600">
               <Image
                 src={RefrigatedContainer}
                 alt=""
@@ -49,8 +54,11 @@ function Services() {
               </div>
             </div>
           </div>
-          <div id="rowTwo" className="flex gap-x-8">
-            <div className="relative w-[762px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl shadow-md overflow-hidden hover:shadow-stone-600">
+          <div
+            id="rowTwo"
+            className="flex flex-col md:flex-row gap-y-8 md:gap-y-0 md:gap-x-8"
+          >
+            <div className="relative w-full md:w-[762px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl shadow-md overflow-hidden hover:shadow-stone-600">
               <Image
                 src={HeavyMachinery}
                 alt=""
@@ -60,7 +68,7 @@ function Services() {
                 Heavy Machinery & Equipment Transportation
               </div>
             </div>
-            <div className="relative w-[398px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl shadow-md overflow-hidden hover:shadow-stone-600">
+            <div className="relative w-full md:w-[398px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl shadow-md overflow-hidden hover:shadow-stone-600">
               <Image
                 src={ContainerSale}
                 alt=""
@@ -71,8 +79,11 @@ function Services() {
               </div>
             </div>
           </div>
-          <div id="rowThree" className="flex gap-x-8">
-            <div className="relative w-[580px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl shadow-md overflow-hidden hover:shadow-stone-600">
+          <div
+            id="rowThree"
+            className="flex flex-col md:flex-row gap-y-8 md:gap-y-0 md:gap-x-8"
+          >
+            <div className="relative w-full md:w-[580px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl shadow-md overflow-hidden hover:shadow-stone-600">
               <Image
                 src={BulkCargo}
                 alt=""
@@ -82,7 +93,7 @@ function Services() {
                 Bulk cargo movement
               </div>
             </div>
-            <div className="relative w-[580px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl shadow-md overflow-hidden hover:shadow-stone-600">
+            <div className="relative w-full md:w-[580px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl shadow-md overflow-hidden hover:shadow-stone-600">
               <Image
                 src={ProjectCargo}
                 alt=""
@@ -94,6 +105,7 @@ function Services() {
             </div>
           </div>
         </div>
+
         <button className="text-lime-700 font-semibold self-center w-fit px-8 py-2 rounded-[44px] border border-lime-700 flex justify-center items-center gap-2">
           Let’s Talk
           <div className="w-8 h-8 relative">

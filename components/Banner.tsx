@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Button from "@/components/Button";
-import BannerImage from '../public/banner-image.png'
-import BannerRightBg from "../public/banner-right-bg.png"
+import BannerImage from "../public/banner-image.png";
+import BannerRightBg from "../public/banner-right-bg.png";
+import Link from "next/link";
 
 function Banner() {
   return (
@@ -11,17 +12,21 @@ function Banner() {
         <div className="flex flex-col justify-center">
           <span className="block">TRANSPORTATION SOLUTIONS</span>
           <h1 className="mb-[.44em] w-[33rem]">
-            Sustainable<br />logistics for a
+            Sustainable
+            <br />
+            logistics for a
             <span className="block text-theme-text-700">greener future</span>
           </h1>
-          <Button
-            type={"submit"}
-            title={"Let's Talk"}
-            variant={"bg-lime-700 text-white"}
-          />
+          <Link href={"#contact-us"} scroll={false}>
+            <Button title={"Let's Talk"} variant={"bg-lime-700 text-white"} />
+          </Link>
         </div>
       </div>
-      <Image src={BannerImage} alt="" className="absolute bottom-0 object-contain md:right-0 md:h-full md:w-[69vw] lg:w-[66vw] xl:w-[69vw] xl:max-h-[55rem]" />
+      <Image
+        src={BannerImage}
+        alt=""
+        className="absolute bottom-0 object-contain md:right-0 md:h-full md:w-[69vw] lg:w-[66vw] xl:w-[69vw] xl:max-h-[55rem]"
+      />
     </section>
   );
 }

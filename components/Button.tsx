@@ -3,17 +3,15 @@ import React from "react";
 import ArrowRight from "../public/arrow-right.svg";
 
 type ButtonProps = {
-  type: "button" | "submit";
   title: string;
   icon?: string;
   variant: string;
 };
 
-const Button = ({ type, title, icon, variant }: ButtonProps) => {
+const Button = ({ title, icon, variant }: ButtonProps) => {
   return (
-    <button
+    <div
       className={`w-fit	h-12 px-8 py-2 rounded-[44px] border border-lime-700 justify-center items-center gap-2 inline-flex ${variant}`}
-      type={type}
     >
       {icon && <Image src={icon} alt={title} />}
       <label
@@ -31,7 +29,7 @@ const Button = ({ type, title, icon, variant }: ButtonProps) => {
         height={32}
         className={`${variant ? "visible" : "hidden"}`}
       />
-    </button>
+    </div>
   );
 };
 

@@ -110,7 +110,7 @@
      bg-theme-text-700 text-white border-theme-text-700;
 
      &:hover, &:focus {
-      @apply text-theme-text-700 bg-white;
+      @apply bg-theme-900 text-white;
      }
   }
 

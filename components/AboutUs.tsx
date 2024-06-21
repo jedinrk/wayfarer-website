@@ -98,20 +98,20 @@ function AboutUs() {
             </h3>
             <p className="font-sans text-lg mb-[1.333em]">
               Greening India&apos;s Future with Wayfarer Logistics World trade
-              propels global prosperity, yet it&apos;s time we reshape how it&apos;s done
-              — trading on nature&apos;s terms. As one of the world&apos;s foremost
-              transport and logistics companies, we bear a profound
-              responsibility for India&apos;s green transition.
+              propels global prosperity, yet it&apos;s time we reshape how
+              it&apos;s done — trading on nature&apos;s terms. As one of the
+              world&apos;s foremost transport and logistics companies, we bear a
+              profound responsibility for India&apos;s green transition.
             </p>
             <p className="font-sans text-lg">
-              At Wayfarer Logistics, we&apos;re already reducing CO2 emissions with
-              our core services: consolidation, mode shift, and load
+              At Wayfarer Logistics, we&apos;re already reducing CO2 emissions
+              with our core services: consolidation, mode shift, and load
               optimisation. However, safeguarding our climate demands more.
               Enter Green Logistics—an array of solutions from CO2 reporting to
               supply chain optimisation, sustainable warehousing, eco-friendly
               fuels, and carbon offsetting. Each solution meticulously crafted
-              to shrink your supply chain&apos;s carbon footprint.Join forces with
-              our team of experts to collaboratively design, implement, and
+              to shrink your supply chain&apos;s carbon footprint.Join forces
+              with our team of experts to collaboratively design, implement, and
               personalise sustainable solutions tailored for your business and
               the environment. Let&apos;s pave the way for a greener, more
               sustainable India together.
@@ -143,11 +143,21 @@ function AboutUs() {
           <div className="flex gap-x-8 overflow-hidden">
             <Swiper
               spaceBetween={24}
-              slidesPerView={4}
+              slidesPerView={2}
+              loop={true}
+              pagination={{ clickable: true }}
+              navigation={{
+                nextEl: ".next-btn",
+                prevEl: ".prev-btn",
+              }}
               breakpoints={{
-                1233: {
+                768: {
+                  slidesPerView: 3,
+                  spaceBetween: 24,
+                },
+                1280: {
                   slidesPerView: 4,
-                  spaceBetween: 32,
+                  spaceBetween: 24,
                 },
               }}
               onSlideChange={() => console.log("slide change")}
@@ -167,11 +177,11 @@ function AboutUs() {
               ))}
             </Swiper>
           </div>
-          <div className="flex justify-between">
+          <div className="flex justify-between mt-12">
             <div></div>
             <div className="flex gap-[15px]">
-              <Image src={PreviousBtn} alt={"Prev Button"} />
-              <Image src={NextBtn} alt={"Next Button"} />
+              <Image className="prev-btn" src={PreviousBtn} alt={"Prev Button"} />
+              <Image className="next-btn" src={NextBtn} alt={"Next Button"} />
             </div>
           </div>
         </div>

@@ -25,7 +25,7 @@ const Testimonial: React.FC<{ testimony: Testimony }> = ({ testimony }) => {
         &quot;{content}&quot;
       </p>
       <div className="flex items-center">
-        <div className="flex items-center border-r border-gray-900 pr-5 gap-5">
+        <div className="flex items-center border-r border-gray-900 pr-3 md:pr-5 gap-3 md:gap-5">
           {profilePic && (
             <Image
               src={profilePic}

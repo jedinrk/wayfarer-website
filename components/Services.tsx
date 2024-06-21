@@ -49,7 +49,7 @@ function Services() {
                 alt=""
                 className="w-full h-full object-cover"
               />
-              <div className="absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
+              <div className="services-overlay absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
                 Container Transporting
               </div>
             </div>
@@ -59,7 +59,7 @@ function Services() {
                 alt=""
                 className="w-full h-full object-cover"
               />
-              <div className="absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
+              <div className="services-overlay absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
                 Refrigerated container Transportation
               </div>
             </div>
@@ -74,7 +74,7 @@ function Services() {
                 alt=""
                 className="w-full h-full object-cover"
               />
-              <div className="absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
+              <div className="services-overlay absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
                 Heavy Machinery & Equipment Transportation
               </div>
             </div>
@@ -84,7 +84,7 @@ function Services() {
                 alt=""
                 className="w-full h-full object-cover"
               />
-              <div className="absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
+              <div className="services-overlay absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
                 Container Sale
               </div>
             </div>
@@ -99,7 +99,7 @@ function Services() {
                 alt=""
                 className="w-full h-full object-cover"
               />
-              <div className="absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
+              <div className="services-overlay absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
                 Bulk cargo movement
               </div>
             </div>
@@ -109,7 +109,7 @@ function Services() {
                 alt=""
                 className="w-full h-full object-cover"
               />
-              <div className="absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
+              <div className="services-overlay absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
                 Project cargo Transportation
               </div>
             </div>

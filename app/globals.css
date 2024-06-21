@@ -7,6 +7,7 @@
 @layer base {
   html {
     color: theme('colors.theme-text-900');
+    scroll-behavior: smooth;
   }
 
   a {
@@ -17,7 +18,7 @@
   }
 
   h1, .h1 {
-    font-size: 2.027rem;
+    font-size: 2.5rem;
     line-height: 1.05;
     font-weight: 600;
     letter-spacing: -.01em;
@@ -103,6 +104,30 @@
 }
 
 @layer components {
+  .button {
+    @apply w-fit text-base md:text-lg lg:text-xl px-[1.6em] border rounded-[64px]
+     inline-flex justify-center items-center gap-2 transition-all
+     bg-theme-text-700 text-white border-theme-text-700;
+
+     &:hover, &:focus {
+      @apply text-theme-text-700 bg-white;
+     }
+  }
+
+  .button:hover .default-icon,
+  .button:focus .default-icon {
+        display: hidden;
+   }
+
+   .button:hover .hover-icon,
+   .button:focus .hover-icon {
+         display: block;
+    }
+
+  .button_secondary {
+   @apply text-theme-text-700 bg-transparent text-base;
+  }
+
   .banner-inner {
     position: relative;
     /* @media (min-width: 1024px) { */

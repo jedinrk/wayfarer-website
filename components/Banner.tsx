@@ -7,8 +7,8 @@ import Link from "next/link";
 
 function Banner() {
   return (
-    <section className="w-full md:h-[50vw] lg:h-[49vw] xl:h-[49vw] xl:max-h-[55rem] sm:pt-[122px] pt-[90px] pb-[74.66vw] md:pb-0 bg-gradient-to-r from-theme-200 to-theme-1100 relative">
-      <div className="relative z-10 w-full max-w-320 md:h-full p-8 md:p-5 md:pb-8 m-auto flex banner-inner">
+    <section className="w-full md:h-[50vw] lg:h-[49vw] xl:h-[49vw] xl:max-h-[55rem] pt-[90px] pb-[74.66vw] lg:pt-[122px] md:pb-0 bg-gradient-to-r from-theme-200 to-theme-1100 relative">
+      <div className="relative z-10 w-full max-w-320 md:h-full pt-5 pb-8 px-4 md:px-5 md:pt-0 md:pb-8 m-auto flex banner-inner">
         <div className="flex flex-col justify-center">
           <span className="block">TRANSPORTATION SOLUTIONS</span>
           <h1 className="mb-[.44em] w-[33rem]">
@@ -17,9 +17,7 @@ function Banner() {
             logistics for a
             <span className="block text-theme-text-700">greener future</span>
           </h1>
-          <Link href={"#contact-us"} className="cursor-pointer">
-            <Button title={"Let's Talk"} variant={"bg-lime-700 text-white"} />
-          </Link>
+          <Button title="Let's Talk" icon />
         </div>
       </div>
       <Image

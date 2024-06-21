@@ -175,9 +175,9 @@ function ContactUs() {
               <div className="flex gap-4 items-start">
                 <Image src={IconPin} alt={"IconPin"} />
                 <label>
-                  Groud Floor, 14/153, 
-                  <br/>Vazhakkoottathil Building, Azheekkal,
-                  <br/>Vypin, Kerala, 682508
+                  Groud Floor, 14/153,
+                  <br />Vazhakkoottathil Building, Azheekkal,
+                  <br />Vypin, Kerala, 682508
                 </label>
               </div>
               <Image src={BgTrackForest} alt={""} className="w-full" />

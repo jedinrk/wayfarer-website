@@ -22,7 +22,7 @@ function Navbar() {
   }
 
   return (
-    <div className="absolute z-30 w-full px-12 py-8">
+    <div className="absolute z-30 w-full px-4 md:px-5 2xl:px-12 py-3 md:py-4 lg:py-8">
       <nav className="flex justify-between items-center w-full m-auto">
         {/* Logo */}
         <Link href="/" className="hidden md:block md:w-[334px] md:h-[58px]">
@@ -49,12 +49,8 @@ function Navbar() {
               </Link>
             ))}
           </ul>
-
-          {/* Let's talk Button */}
           <div className="hidden lg:block cursor-pointer">
-            <Link href={"#contact-us"}>
-              <Button title={"Let's Talk"} variant={""} />
-            </Link>
+            <Button title="Let's Talk" variant="button_secondary" />
           </div>
         </div>
         <button className="lg:hidden" onClick={handleMenuClick}>

@@ -17,7 +17,7 @@ function Banner() {
             logistics for a
             <span className="block text-theme-text-700">greener future</span>
           </h1>
-          <Link href={"#contact-us"} scroll={false}>
+          <Link href={"#contact-us"} className="cursor-pointer">
             <Button title={"Let's Talk"} variant={"bg-lime-700 text-white"} />
           </Link>
         </div>

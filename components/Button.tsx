@@ -11,7 +11,7 @@ type ButtonProps = {
 const Button = ({ title, icon, variant }: ButtonProps) => {
   return (
     <div
-      className={`w-fit	h-12 px-8 py-2 rounded-[44px] border border-lime-700 justify-center items-center gap-2 inline-flex ${variant}`}
+      className={`w-fit	h-12 px-8 py-2 rounded-[44px] border border-lime-700 justify-center items-center gap-2 inline-flex ${variant} cursor-pointer`}
     >
       {icon && <Image src={icon} alt={title} />}
       <label

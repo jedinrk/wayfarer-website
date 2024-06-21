@@ -44,15 +44,15 @@ function Navbar() {
           {/* Menu Items */}
           <ul className="lg:flex hidden flex-1 align-middle justify-between max-w-[34rem] ml-16 mr-8 2xl:m-0 2xl:max-w-[unset] 2xl:gap-12 2xl:justify-center">
             {NAV_LINKS.map((link) => (
-              <Link href={link.href} key={link.key} scroll={false}>
+              <Link href={link.href} key={link.key}>
                 {link.label}
               </Link>
             ))}
           </ul>
 
           {/* Let's talk Button */}
-          <div className="hidden lg:block">
-            <Link href={"#contact-us"} scroll={false}>
+          <div className="hidden lg:block cursor-pointer">
+            <Link href={"#contact-us"}>
               <Button title={"Let's Talk"} variant={""} />
             </Link>
           </div>
@@ -79,7 +79,6 @@ function Navbar() {
               <Link
                 href={link.href}
                 key={link.key}
-                scroll={false}
                 className="text-white/80 hover:text-white"
               >
                 {link.label}

@@ -8,9 +8,7 @@ import BulkCargo from "../public/bulk-cargo.jpg";
 import ProjectCargo from "../public/project-cargo.jpg";
 import GreenArrowRight from "../public/gg_arrow-right.svg";
 
-function renderRow() {
-
-}
+function renderRow() {}
 
 function Services() {
   return (
@@ -24,11 +22,19 @@ function Services() {
             <h3 className="h2 mb-3 lg:mb-0">
               Green, efficient &<br /> reliable logistics
             </h3>
-            <p className="max-w-[477px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat. Suspendisse ornare, eros dolor interdum nulla.
+            <p className="max-w-[565px]">
+              At Wayfarer Logistics, our unwavering commitment to sustainability
+              and operational excellence sets us apart in the logistics
+              industry. We prioritize eco-friendly practices, utilizing advanced
+              technology to minimize our environmental impact while maximizing
+              efficiency. Our team of experts ensures that every aspect of our
+              service is executed with precision and care, guaranteeing that
+              your cargo arrives safely and on time. Whether you&apos;re moving
+              temperature-sensitive goods or heavy machinery, our innovative
+              approach and dedication to reliability make us the preferred
+              choice for businesses seeking top-tier logistics solutions. Trust
+              Wayfarer Logistics to deliver not just your cargo, but also peace
+              of mind.
             </p>
           </div>
         </div>
@@ -110,7 +116,7 @@ function Services() {
           </div>
         </div>
 
-        <button className="text-lime-700 font-semibold self-center w-fit px-8 py-2 rounded-[44px] border border-lime-700 flex justify-center items-center gap-2">
+        <button className="text-lime-700 bg-white font-semibold self-center w-fit px-8 py-2 rounded-[44px] border border-lime-700 flex justify-center items-center gap-2">
           Let’s Talk
           <div className="w-8 h-8 relative">
             <Image src={GreenArrowRight} alt={"Green Arrow Right"} />

@@ -8,6 +8,10 @@ import BulkCargo from "../public/bulk-cargo.jpg";
 import ProjectCargo from "../public/project-cargo.jpg";
 import GreenArrowRight from "../public/gg_arrow-right.svg";
 
+function renderRow() {
+
+}
+
 function Services() {
   return (
     <section id="services" className="bg-theme-1000">
@@ -33,7 +37,7 @@ function Services() {
             id="rowOne"
             className="flex flex-col md:flex-row gap-y-8 md:gap-y-0 md:gap-x-8"
           >
-            <div className="relative w-full md:w-[478px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl shadow-md overflow-hidden hover:shadow-stone-600">
+            <div className="relative w-full md:w-[478px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl hover:shadow-3xl overflow-hidden hover:shadow-theme-1200">
               <Image
                 src={ContainerTransport}
                 alt=""
@@ -43,7 +47,7 @@ function Services() {
                 Container Transporting
               </div>
             </div>
-            <div className="relative w-full md:w-[682px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl shadow-md overflow-hidden hover:shadow-stone-600">
+            <div className="relative w-full md:w-[682px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl hover:shadow-3xl overflow-hidden hover:shadow-theme-1200">
               <Image
                 src={RefrigatedContainer}
                 alt=""
@@ -58,7 +62,7 @@ function Services() {
             id="rowTwo"
             className="flex flex-col md:flex-row gap-y-8 md:gap-y-0 md:gap-x-8"
           >
-            <div className="relative w-full md:w-[762px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl shadow-md overflow-hidden hover:shadow-stone-600">
+            <div className="relative w-full md:w-[762px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl hover:shadow-3xl overflow-hidden hover:shadow-theme-1200">
               <Image
                 src={HeavyMachinery}
                 alt=""
@@ -68,7 +72,7 @@ function Services() {
                 Heavy Machinery & Equipment Transportation
               </div>
             </div>
-            <div className="relative w-full md:w-[398px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl shadow-md overflow-hidden hover:shadow-stone-600">
+            <div className="relative w-full md:w-[398px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl hover:shadow-3xl overflow-hidden hover:shadow-theme-1200">
               <Image
                 src={ContainerSale}
                 alt=""
@@ -83,7 +87,7 @@ function Services() {
             id="rowThree"
             className="flex flex-col md:flex-row gap-y-8 md:gap-y-0 md:gap-x-8"
           >
-            <div className="relative w-full md:w-[580px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl shadow-md overflow-hidden hover:shadow-stone-600">
+            <div className="relative w-full md:w-[580px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl hover:shadow-3xl overflow-hidden hover:shadow-theme-1200">
               <Image
                 src={BulkCargo}
                 alt=""
@@ -93,7 +97,7 @@ function Services() {
                 Bulk cargo movement
               </div>
             </div>
-            <div className="relative w-full md:w-[580px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl shadow-md overflow-hidden hover:shadow-stone-600">
+            <div className="relative w-full md:w-[580px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl hover:shadow-3xl overflow-hidden hover:shadow-theme-1200">
               <Image
                 src={ProjectCargo}
                 alt=""

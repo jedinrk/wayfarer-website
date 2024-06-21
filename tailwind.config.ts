@@ -33,6 +33,7 @@ const config: Config = {
         'theme-900': '#215218',
         'theme-1000': '#FCF2E0',
         'theme-1100': '#E1E99B',
+        'theme-1200': '#ACDA6D',
         'theme-text-300': '#ADD356',
         'theme-text-700': '#4B8200',
         'theme-text-900': '#0A1D06',
@@ -62,6 +63,9 @@ const config: Config = {
           letterSpacing: '-.01em'
         }],
       },
+      boxShadow: {
+        '3xl': '-4px -4px 40px 0px rgba(172, 218, 109, 1)',
+      }
     },
   },
   plugins: [],

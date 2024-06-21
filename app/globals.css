@@ -17,6 +17,10 @@
     }
   }
 
+  input, select, textarea {
+    @apply p-3 bg-white rounded border border-stone-300;
+  }
+
   h1, .h1 {
     font-size: 2.5rem;
     line-height: 1.05;
@@ -135,6 +139,10 @@
         content: "";
       }
     /* } */
+  }
+
+  .contact-us-half-grid {
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   }
 
   .services-overlay {

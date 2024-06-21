@@ -138,7 +138,7 @@ function AboutUs() {
             />
           </div>
         </div>
-        <div className="">
+        <div >
           <h3 className="mb-[.8em]">Introducing our team</h3>
           <div className="flex gap-x-8 overflow-hidden">
             <Swiper

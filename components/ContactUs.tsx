@@ -39,13 +39,13 @@ const FormComponent = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-4 md:items-center lg:items-stretch"
+      className="max-w-[564px] m-auto flex flex-col gap-4"
     >
-      <div className="flex justify-between gap-4">
+      <div className="grid gap-4 contact-us-half-grid">
         <div className="form-group flex flex-col">
           <label htmlFor="firstName">First Name:<span className="text-red-600 text-sm leading-tight"> *</span></label>
           <input
-            className="w-[274px] h-12 p-3 bg-white rounded border border-stone-300"
+
             type="text"
             name="firstName"
             id="firstName"
@@ -57,7 +57,7 @@ const FormComponent = () => {
         <div className="form-group flex flex-col">
           <label htmlFor="lastName">Last Name:<span className="text-red-600 text-sm leading-tight"> *</span></label>
           <input
-            className="w-[274px] h-12 p-3 bg-white rounded border border-stone-300"
+
             type="text"
             name="lastName"
             id="lastName"
@@ -66,12 +66,10 @@ const FormComponent = () => {
             required
           />
         </div>
-      </div>
-      <div className="flex justify-between gap-4">
         <div className="form-group flex flex-col">
           <label htmlFor="email">Email:<span className="text-red-600 text-sm leading-tight"> *</span></label>
           <input
-            className="w-[274px] h-12 p-3 bg-white rounded border border-stone-300"
+
             type="email"
             name="email"
             id="email"
@@ -83,7 +81,7 @@ const FormComponent = () => {
         <div className="form-group flex flex-col">
           <label htmlFor="phoneNumber">Phone Number:<span className="text-red-600 text-sm leading-tight"> *</span></label>
           <input
-            className="w-[274px] h-12 p-3 bg-white rounded border border-stone-300"
+
             type="tel"
             name="phoneNumber"
             id="phoneNumber"
@@ -93,10 +91,10 @@ const FormComponent = () => {
         </div>
       </div>
 
-      <div className="form-group flex flex-col max-w-[564px] w-full">
+      <div className="form-group flex flex-col">
         <label htmlFor="company">Company:</label>
         <input
-          className="w-full h-12 p-3 bg-white rounded border border-stone-300"
+          className="w-full "
           type="text"
           name="company"
           id="company"
@@ -104,10 +102,10 @@ const FormComponent = () => {
           onChange={handleChange}
         />
       </div>
-      <div className="form-group flex flex-col max-w-[564px] w-full">
+      <div className="form-group flex flex-col">
         <label htmlFor="interestedIn">I&apos;m interested in:<span className="text-red-600 text-sm leading-tight"> *</span></label>
         <select
-          className="h-12 p-3 bg-white rounded border border-stone-300"
+
           name="interestedIn"
           id="interestedIn"
           value={formData.interestedIn}
@@ -125,10 +123,10 @@ const FormComponent = () => {
           <option value="option6">Project cargo Transportation</option>
         </select>
       </div>
-      <div className="form-group flex flex-col max-w-[564px] w-full">
+      <div className="form-group flex flex-col">
         <label htmlFor="message">Message:</label>
         <textarea
-          className="h-[180px] bg-white rounded border border-stone-300"
+          rows={6}
           name="message"
           id="message"
           value={formData.message}
@@ -136,7 +134,7 @@ const FormComponent = () => {
           required
         />
       </div>
-      <div className="flex flex-col max-w-[564px] w-full gap-4">
+      <div className="flex flex-col gap-4">
         <ReCAPTCHA
           sitekey="6LfHYf0pAAAAAM0VVdPSwITD6H98UHJrXh0L0Kln"
           onChange={reCaptchaOnChange}
@@ -166,24 +164,24 @@ function ContactUs() {
             <div className="flex flex-col gap-4">
               <div className="flex gap-4">
                 <Image src={IconEmail} alt={"IconEmail"} />
-                <label>wayfarerlogisticspvtltd@gmail.com</label>
+                <a className="font-normal" href="mailto:wayfarerlogisticspvtltd@gmail.com">wayfarerlogisticspvtltd@gmail.com</a>
               </div>
               <div className="flex gap-4">
                 <Image src={IconPhone} alt={"IconPhone"} />
-                <label>+91 9746710770</label>
+                <a className="font-normal" href="tel:+919746710770">+91 9746710770</a>
               </div>
               <div className="flex gap-4 items-start">
                 <Image src={IconPin} alt={"IconPin"} />
-                <label>
+                <address className="not-italic">
                   Groud Floor, 14/153,
                   <br />Vazhakkoottathil Building, Azheekkal,
                   <br />Vypin, Kerala, 682508
-                </label>
+                </address>
               </div>
               <Image src={BgTrackForest} alt={""} className="w-full" />
             </div>
           </div>
-          <div className="lg:flex-1 lg:mt-0 md:mt-16">
+          <div className="lg:flex-1 mt-12 md:mt-16 lg:mt-0">
             <FormComponent />
           </div>
         </div>

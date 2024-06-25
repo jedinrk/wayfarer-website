@@ -1,5 +1,5 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import ContainerTransport from "../public/container-transport.jpg";
 import RefrigatedContainer from "../public/refrigated-container-transport.jpg";
 import HeavyMachinery from "../public/heavy-machinery.jpg";
@@ -7,8 +7,6 @@ import ContainerSale from "../public/container-sale.jpg";
 import BulkCargo from "../public/bulk-cargo.jpg";
 import ProjectCargo from "../public/project-cargo.jpg";
 import GreenArrowRight from "../public/gg_arrow-right.svg";
-
-function renderRow() { }
 
 function Services() {
   return (
@@ -116,7 +114,10 @@ function Services() {
           </div>
         </div>
 
-        <button className="text-lime-700 bg-white font-semibold self-center w-fit px-8 py-2 rounded-[44px] border border-lime-700 flex justify-center items-center gap-2">
+        <button
+          onClick={() => (window.location.hash = "#contact-us")}
+          className="text-lime-700 bg-white font-semibold self-center w-fit px-8 py-2 rounded-[44px] border border-lime-700 flex justify-center items-center gap-2"
+        >
           Let’s Talk
           <div className="w-8 h-8 relative">
             <Image src={GreenArrowRight} alt={"Green Arrow Right"} />

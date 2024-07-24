@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import ContainerTransport from "../public/container-transport.jpg";
-import RefrigatedContainer from "../public/refrigated-container-transport.webp";
-import HeavyMachinery from "../public/heavy-machinery.webp";
+import RefrigatedContainer from "../public/refrigated-container-transport.jpg";
+import HeavyMachinery from "../public/heavy-machinery.jpg";
 import ContainerSale from "../public/container-sale.jpg";
-import BulkCargo from "../public/bulk-cargo.webp";
+import BulkCargo from "../public/bulk-cargo.jpg";
 import ProjectCargo from "../public/project-cargo.webp";
 import GreenArrowRight from "../public/gg_arrow-right.svg";
 

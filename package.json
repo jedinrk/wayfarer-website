@@ -10,6 +10,9 @@
     "export": "next build && next export -o _static"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^5.16.7",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",

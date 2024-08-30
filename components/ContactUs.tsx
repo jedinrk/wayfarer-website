@@ -5,12 +5,20 @@ import BgTrackForest from "../public/bg-truck-forest.jpeg";
 import IconEmail from "../public/ic_email.svg";
 import IconPhone from "../public/ic_phone.svg";
 import IconPin from "../public/ic_pin.svg";
+import ContactUsBg from "../public/bg-contact-us.jpg";
+import ContactUsTruck from "../public/contact-us-truck.png";
+import { MenuItem, Select, TextField } from "@mui/material";
+import CustomTextField from "./CustomTextField";
+import CustomPhoneInput from "./CustomPhoneInput";
+import InterestCheckbox from "./InterestCheckbox";
+import Button from "./Button";
 
 const FormComponent = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
+    countryCode: "",
     phoneNumber: "",
     company: "",
     interestedIn: "",
@@ -20,6 +28,8 @@ const FormComponent = () => {
   const [submitEnabled, setSubmitEnabled] = useState(false);
 
   const handleChange = (event: { target: { name: any; value: any } }) => {
+    console.log(event.target.name);
+    console.log(event.target.value);
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
@@ -39,59 +49,58 @@ const FormComponent = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-[564px] m-auto flex flex-col gap-4"
+      className="max-w-[564px] m-auto flex flex-col gap-7"
     >
       <div className="grid gap-4 contact-us-half-grid">
         <div className="form-group flex flex-col">
-          <label htmlFor="firstName">First Name:<span className="text-red-600 text-sm leading-tight"> *</span></label>
-          <input
-
-            type="text"
+          <CustomTextField
+            required
+            fullWidth
             name="firstName"
             id="firstName"
+            label="First Name"
+            variant="standard"
+            className="font-text-100 bg-text-100"
             value={formData.firstName}
             onChange={handleChange}
-            required
           />
         </div>
         <div className="form-group flex flex-col">
-          <label htmlFor="lastName">Last Name:<span className="text-red-600 text-sm leading-tight"> *</span></label>
-          <input
-
-            type="text"
+          <CustomTextField
+            fullWidth
             name="lastName"
             id="lastName"
             value={formData.lastName}
             onChange={handleChange}
-            required
+            label="Last Name"
+            variant="standard"
+            className="font-text-100 bg-text-100"
           />
         </div>
-        <div className="form-group flex flex-col">
-          <label htmlFor="email">Email:<span className="text-red-600 text-sm leading-tight"> *</span></label>
-          <input
-
-            type="email"
-            name="email"
-            id="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group flex flex-col">
-          <label htmlFor="phoneNumber">Phone Number:<span className="text-red-600 text-sm leading-tight"> *</span></label>
-          <input
-
-            type="tel"
+      </div>
+      <div className="form-group flex flex-col">
+        <CustomTextField
+          fullWidth
+          type="email"
+          name="email"
+          id="email"
+          value={formData.email}
+          onChange={handleChange}
+          label="Business Email"
+          variant="standard"
+          className="font-text-100 bg-text-100"
+        />
+      </div>
+      <div className="form-group flex flex-col">
+        <div className="flex">
+          <CustomPhoneInput
             name="phoneNumber"
-            id="phoneNumber"
             value={formData.phoneNumber}
             onChange={handleChange}
           />
         </div>
       </div>
-
-      <div className="form-group flex flex-col">
+      {/* <div className="form-group flex flex-col">
         <label htmlFor="company">Company:</label>
         <input
           className="w-full "
@@ -101,37 +110,26 @@ const FormComponent = () => {
           value={formData.company}
           onChange={handleChange}
         />
-      </div>
+      </div> */}
       <div className="form-group flex flex-col">
-        <label htmlFor="interestedIn">I&apos;m interested in:<span className="text-red-600 text-sm leading-tight"> *</span></label>
-        <select
-
+        <InterestCheckbox
           name="interestedIn"
-          id="interestedIn"
           value={formData.interestedIn}
           onChange={handleChange}
-        >
-          <option value="">Select an option</option>
-          {/* Add your dropdown options here */}
-          <option value="option1">Container Transporting</option>
-          <option value="option2">Refrigerated container Transportation</option>
-          <option value="option3">
-            Heavy Machinery & Equipment Transportation
-          </option>
-          <option value="option4">Container Sale</option>
-          <option value="option5">Bulk cargo movement</option>
-          <option value="option6">Project cargo Transportation</option>
-        </select>
+        />
       </div>
       <div className="form-group flex flex-col">
-        <label htmlFor="message">Message:</label>
-        <textarea
-          rows={6}
+        <CustomTextField
+          fullWidth
+          multiline
           name="message"
           id="message"
+          label="Message"
+          variant="standard"
+          className="font-text-100 bg-text-100"
           value={formData.message}
           onChange={handleChange}
-          required
+          rows={6}
         />
       </div>
       <div className="flex flex-col gap-4">
@@ -139,13 +137,14 @@ const FormComponent = () => {
           sitekey="6LfHYf0pAAAAAM0VVdPSwITD6H98UHJrXh0L0Kln"
           onChange={reCaptchaOnChange}
         />
-        <button
+        <Button title="Submit" disabled={!submitEnabled} icon width="w-[100px]" height="h-[32px]"/>
+        {/* <button
           type="submit"
           className="w-[147px] h-12 px-8 py-2 bg-lime-700 rounded text-white disabled:opacity-70"
           disabled={!submitEnabled}
         >
           Submit
-        </button>
+        </button> */}
       </div>
     </form>
   );
@@ -155,30 +154,50 @@ function ContactUs() {
   return (
     <section id="contact-us" className="w-full">
       <div className="w-full max-w-320 m-auto px-4 md:px-5 py-14 md:py-20 xl:py-28">
-        <div className="lg:flex md:flex-row gap-8">
-          <div className="lg:flex-1">
-            <h2 className="uppercase mb-[.5em] text-theme-text-700 h6">Contact Us</h2>
-            <h3 className="h2 mb-6">
-              Our friendly team would love to hear from you.
-            </h3>
-            <div className="flex flex-col gap-4">
-              <div className="flex gap-4">
-                <Image src={IconEmail} alt={"IconEmail"} />
-                <a className="font-normal" href="mailto:wayfarerlogisticspvtltd@gmail.com">wayfarerlogisticspvtltd@gmail.com</a>
+        <div className="lg:flex md:flex-row gap-32">
+          <div className="relative lg:flex-1 w-[478px] bg-[#E8F4CD] rounded-3xl	">
+            {/* <Image
+              src={ContactUsBg}
+              alt="Contact Us Background"
+              className="absolute inset-0  object-cover z-10"
+            /> */}
+            <div className="relative z-20">
+              <div className="pl-[42px] pt-[47px]">
+                <h2 className="uppercase mb-[.5em] text-theme-text-700 h6">
+                  Contact Us
+                </h2>
+                <h3 className="h2 mt-5 mb-14 w-[398px] h-[148px]">
+                  Send a message to our team
+                </h3>
+                <div className="flex flex-col gap-4">
+                  <div className="flex gap-4">
+                    <Image src={IconEmail} alt="IconEmail" />
+                    <a
+                      className="opacity-80 text-[#1a282b] text-lg font-medium leading-loose"
+                      href="mailto:wayfarerlogisticspvtltd@gmail.com"
+                    >
+                      wayfarerlogisticspvtltd@gmail.com
+                    </a>
+                  </div>
+                  <div className="flex gap-4">
+                    <Image src={IconPhone} alt="IconPhone" />
+                    <a className="opacity-80 text-[#1a282b] text-lg font-medium leading-loose" href="tel:+919746710770">
+                      +91 9746710770
+                    </a>
+                  </div>
+                  <div className="flex gap-4 items-start">
+                    <Image src={IconPin} alt="IconPin" className="pt-2"/>
+                    <address className="not-italic opacity-80 text-[#1a282b] text-lg font-medium leading-loose">
+                      Ground Floor, 14/153,
+                      <br />
+                      Vazhakkoottathil Building, Azheekkal,
+                      <br />
+                      Vypin, Kerala, 682508
+                    </address>
+                  </div>
+                </div>
               </div>
-              <div className="flex gap-4">
-                <Image src={IconPhone} alt={"IconPhone"} />
-                <a className="font-normal" href="tel:+919746710770">+91 9746710770</a>
-              </div>
-              <div className="flex gap-4 items-start">
-                <Image src={IconPin} alt={"IconPin"} />
-                <address className="not-italic">
-                  Groud Floor, 14/153,
-                  <br />Vazhakkoottathil Building, Azheekkal,
-                  <br />Vypin, Kerala, 682508
-                </address>
-              </div>
-              <Image src={BgTrackForest} alt={""} className="w-full" />
+              <Image src={ContactUsTruck} alt="" className="mt-[50px]" width={384} height={253} />
             </div>
           </div>
           <div className="lg:flex-1 mt-12 md:mt-16 lg:mt-0">

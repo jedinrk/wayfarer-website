@@ -50,7 +50,7 @@ const FormComponent = () => {
       onSubmit={handleSubmit}
       className="max-w-[564px] m-auto flex flex-col gap-7"
     >
-      <div className="grid gap-4 contact-us-half-grid">
+      <div className="grid gap-4 contact-us-half-grid grid-cols-2">
         <div className="form-group flex flex-col">
           <CustomTextField
             required

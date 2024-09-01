@@ -5,9 +5,8 @@ import BgTrackForest from "../public/bg-truck-forest.jpeg";
 import IconEmail from "../public/ic_email.svg";
 import IconPhone from "../public/ic_phone.svg";
 import IconPin from "../public/ic_pin.svg";
-import ContactUsBg from "../public/bg-contact-us.jpg";
+import ContactUsBg from "../public/contact-left-bg.png";
 import ContactUsTruck from "../public/contact-us-truck.png";
-import { MenuItem, Select, TextField } from "@mui/material";
 import CustomTextField from "./CustomTextField";
 import CustomPhoneInput from "./CustomPhoneInput";
 import InterestCheckbox from "./InterestCheckbox";
@@ -155,19 +154,19 @@ function ContactUs() {
     <section id="contact-us" className="w-full">
       <div className="w-full max-w-320 m-auto px-4 md:px-5 py-14 md:py-20 xl:py-28">
         <div className="lg:flex md:flex-row gap-32">
-          <div className="relative lg:flex-1 w-[478px] bg-[#E8F4CD] rounded-3xl	">
-            {/* <Image
+          <div className="relative lg:flex-1 rounded-3xl">
+            <Image
               src={ContactUsBg}
               alt="Contact Us Background"
               className="absolute inset-0  object-cover z-10"
-            /> */}
+            />
             <div className="relative z-20">
-              <div className="pl-[42px] pt-[47px]">
+              <div className="p-4 md:p-7 lg:p-9 pt-[47px]">
                 <h2 className="uppercase mb-[.5em] text-theme-text-700 h6">
                   Contact Us
                 </h2>
-                <h3 className="h2 mt-5 mb-14 w-[398px] h-[148px]">
-                  Send a message to our team
+                <h3 className="h2 mb-6 font-medium leading-[1.07]">
+                  Send a message <br/> to our team
                 </h3>
                 <div className="flex flex-col gap-4">
                   <div className="flex gap-4">
@@ -187,7 +186,7 @@ function ContactUs() {
                   </div>
                   <div className="flex gap-4 items-start">
                     <Image src={IconPin} alt="IconPin" className="pt-2"/>
-                    <address className="not-italic opacity-80 text-[#1a282b] text-lg font-medium leading-loose">
+                    <address className="not-italic opacity-80 text-[#1a282b] text-lg font-medium leading-[1.3]">
                       Ground Floor, 14/153,
                       <br />
                       Vazhakkoottathil Building, Azheekkal,
@@ -197,7 +196,7 @@ function ContactUs() {
                   </div>
                 </div>
               </div>
-              <Image src={ContactUsTruck} alt="" className="mt-[50px]" width={384} height={253} />
+              {/* <Image src={ContactUsTruck} alt="" className="mt-[50px]" width={384} height={253} /> */}
             </div>
           </div>
           <div className="lg:flex-1 mt-12 md:mt-16 lg:mt-0">

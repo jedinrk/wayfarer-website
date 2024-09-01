@@ -153,7 +153,7 @@ function ContactUs() {
   return (
     <section id="contact-us" className="w-full">
       <div className="w-full max-w-320 m-auto px-4 md:px-5 py-14 md:py-20 xl:py-28">
-        <div className="lg:flex md:flex-row gap-32">
+        <div className="md:flex md:flex-col lg:flex-row items-center gap-16">
           <div className="relative lg:flex-1 rounded-3xl">
             <Image
               src={ContactUsBg}
@@ -196,7 +196,7 @@ function ContactUs() {
                   </div>
                 </div>
               </div>
-              {/* <Image src={ContactUsTruck} alt="" className="mt-[50px]" width={384} height={253} /> */}
+              <Image src={ContactUsTruck} alt="" className="mt-[50px]" />
             </div>
           </div>
           <div className="lg:flex-1 mt-12 md:mt-16 lg:mt-0">

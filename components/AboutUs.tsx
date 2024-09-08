@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from 'swiper/modules';
 import "swiper/css";
 import AboutUsW from "../public/W-full.png";
 import AboutUsWTrans from "../public/W-transparent.png";
-import MapBg from "../public/map-bg.png";
 import Members from "./Members";
 import NextBtn from "../public/btn-next.svg";
 import PreviousBtn from "../public/btn-previous.svg";
@@ -107,6 +107,7 @@ function AboutUs() {
               slidesPerView={2}
               loop={true}
               pagination={{ clickable: true }}
+              modules={[Navigation]}
               navigation={{
                 nextEl: ".next-btn",
                 prevEl: ".prev-btn",

@@ -100,13 +100,11 @@ const FormComponent = () => {
           />
         </div>
       </div>
-      <div className="form-group flex flex-col">
-        <InterestCheckbox
-          name="interestedIn"
-          value={formData.interestedIn}
-          onChange={handleChange}
-        />
-      </div>
+      <InterestCheckbox
+        name="interestedIn"
+        value={formData.interestedIn}
+        onChange={handleChange}
+      />
       <div className="form-group flex flex-col">
         <CustomTextField
           fullWidth

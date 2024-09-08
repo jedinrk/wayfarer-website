@@ -13,7 +13,7 @@ const InterestCheckbox: React.FC<InterestCheckboxProps> = ({
   onChange,
 }) => {
   return (
-    <div className="h-20 flex-col justify-start items-start gap-4 inline-flex">
+    <div className="flex-col justify-start items-start gap-4 inline-flex">
       <div className="text-[#1a282b] text-lg font-normal font-['Figtree'] leading-normal">
         I’m interested in
       </div>
@@ -23,7 +23,7 @@ const InterestCheckbox: React.FC<InterestCheckboxProps> = ({
           value={value}
           onChange={onChange}
           row
-          className="gap-10"
+          className="gap-5 md:gap-10"
         >
           <FormControlLabel
             value="Container Transportation"

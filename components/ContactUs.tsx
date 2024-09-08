@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Image from "next/image";
-import BgTrackForest from "../public/bg-truck-forest.jpeg";
 import IconEmail from "../public/ic_email.svg";
 import IconPhone from "../public/ic_phone.svg";
 import IconPin from "../public/ic_pin.svg";
-import ContactUsBg from "../public/contact-left-bg.png";
 import ContactUsTruck from "../public/contact-us-truck.png";
 import CustomTextField from "./CustomTextField";
 import CustomPhoneInput from "./CustomPhoneInput";
 import InterestCheckbox from "./InterestCheckbox";
 import Button from "./Button";
+
+import ContactUsBgLogo from "../public/contact-us-bg-logo.png";
+//import ContactUsBgLogo from "../components/ContactUsBgLogo";
 
 const FormComponent = () => {
   const [formData, setFormData] = useState({
@@ -99,17 +100,6 @@ const FormComponent = () => {
           />
         </div>
       </div>
-      {/* <div className="form-group flex flex-col">
-        <label htmlFor="company">Company:</label>
-        <input
-          className="w-full "
-          type="text"
-          name="company"
-          id="company"
-          value={formData.company}
-          onChange={handleChange}
-        />
-      </div> */}
       <div className="form-group flex flex-col">
         <InterestCheckbox
           name="interestedIn"
@@ -136,14 +126,13 @@ const FormComponent = () => {
           sitekey="6LfHYf0pAAAAAM0VVdPSwITD6H98UHJrXh0L0Kln"
           onChange={reCaptchaOnChange}
         />
-        <Button title="Submit" disabled={!submitEnabled} icon width="w-[100px]" height="h-[32px]"/>
-        {/* <button
-          type="submit"
-          className="w-[147px] h-12 px-8 py-2 bg-lime-700 rounded text-white disabled:opacity-70"
+        <Button
+          title="Submit"
           disabled={!submitEnabled}
-        >
-          Submit
-        </button> */}
+          icon
+          width="w-[100px]"
+          height="h-[32px]"
+        />
       </div>
     </form>
   );
@@ -153,20 +142,23 @@ function ContactUs() {
   return (
     <section id="contact-us" className="w-full">
       <div className="w-full max-w-320 m-auto px-4 md:px-5 py-14 md:py-20 xl:py-28">
-        <div className="md:flex md:flex-col lg:flex-row items-center gap-16">
-          <div className="relative lg:flex-1 rounded-3xl">
+        <div className="md:flex md:flex-col lg:flex-row items-center gap-[134px] max-w-fit">
+          <div className="relative lg:flex-1 rounded-3xl bg-[#E8F4CD]">
             <Image
-              src={ContactUsBg}
-              alt="Contact Us Background"
-              className="absolute inset-0  object-cover z-10"
+              src={ContactUsBgLogo}
+              alt="Contact Us Background Logo"
+              className="absolute inset-0 object-cover z-10 mt-2"
             />
+            {/* <div className="absolute inset-0 object-cover z-10">
+              <ContactUsBgLogo />
+            </div> */}
             <div className="relative z-20">
               <div className="p-4 md:p-7 lg:p-9 pt-[47px]">
                 <h2 className="uppercase mb-[.5em] text-theme-text-700 h6">
                   Contact Us
                 </h2>
                 <h3 className="h2 mb-6 font-medium leading-[1.07]">
-                  Send a message <br/> to our team
+                  Send a message <br /> to our team
                 </h3>
                 <div className="flex flex-col gap-4">
                   <div className="flex gap-4">
@@ -180,12 +172,15 @@ function ContactUs() {
                   </div>
                   <div className="flex gap-4">
                     <Image src={IconPhone} alt="IconPhone" />
-                    <a className="opacity-80 text-[#1a282b] text-lg font-medium leading-loose" href="tel:+919746710770">
+                    <a
+                      className="opacity-80 text-[#1a282b] text-lg font-medium leading-loose"
+                      href="tel:+919746710770"
+                    >
                       +91 9746710770
                     </a>
                   </div>
                   <div className="flex gap-4 items-start">
-                    <Image src={IconPin} alt="IconPin" className="pt-2"/>
+                    <Image src={IconPin} alt="IconPin" className="pt-2" />
                     <address className="not-italic opacity-80 text-[#1a282b] text-lg font-medium leading-[1.3]">
                       Ground Floor, 14/153,
                       <br />
@@ -196,7 +191,11 @@ function ContactUs() {
                   </div>
                 </div>
               </div>
-              <Image src={ContactUsTruck} alt="" className="mt-[50px]" />
+              <Image
+                src={ContactUsTruck}
+                alt=""
+                className="mt-0 md:mt-[50px]"
+              />
             </div>
           </div>
           <div className="lg:flex-1 mt-12 md:mt-16 lg:mt-0">

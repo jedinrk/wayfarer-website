@@ -10,6 +10,9 @@ import CustomPhoneInput from "./CustomPhoneInput";
 import InterestCheckbox from "./InterestCheckbox";
 import Button from "./Button";
 
+import { useForm, ValidationError } from '@formspree/react';
+
+
 const FormComponent = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -23,6 +26,11 @@ const FormComponent = () => {
   });
 
   const [submitEnabled, setSubmitEnabled] = useState(false);
+  const [state, handleSubmit] = useForm("xanwkkjr");
+
+  if (state.succeeded) {
+      return <p>Thanks for joining!</p>;
+  }
 
   const handleChange = (event: { target: { name: any; value: any } }) => {
     console.log(event.target.name);
@@ -30,11 +38,11 @@ const FormComponent = () => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
-  const handleSubmit = (event: { preventDefault: () => void }) => {
-    event.preventDefault();
-    console.log("Form submitted!", formData);
-    // Handle form submission logic here (e.g., send data to server)
-  };
+  // const handleSubmit = (event: { preventDefault: () => void }) => {
+  //   event.preventDefault();
+  //   console.log("Form submitted!", formData);
+  //   // Handle form submission logic here (e.g., send data to server)
+  // };
 
   const reCaptchaOnChange = (value: any) => {
     console.log("Captcha value:", value);

@@ -9,79 +9,40 @@ import Members from "./Members";
 import NextBtn from "../public/btn-next.svg";
 import PreviousBtn from "../public/btn-previous.svg";
 
+import FaisaalAvatar from "../public/faisaal.png";
+import FarshadAvatar from "../public/farshad.jpg";
+import PlaeholderAvatar from "../public/user.png"
+
 type Member = {
   profileUrl: string;
   name: string;
   role: string;
   linkedin: string;
-  twitter: string;
-  dribble: string;
 };
 const members: Member[] = [
   {
-    profileUrl: "https://avatar.iran.liara.run/public/46",
-    name: "Arlene McCoy",
-    role: "Chief Executive Officer",
+    profileUrl: FaisaalAvatar.src,
+    name: "Faisaal Muhammad",
+    role: "Director",
     linkedin: "https://www.linkedin.com/in/naveenkravindran/",
-    twitter: "https://x.com/aqtis_io",
-    dribble: "https://dribbble.com/creativemints",
   },
   {
-    profileUrl: "https://avatar.iran.liara.run/public/46", // Replace with actual profile URL
-    name: "John Doe",
-    role: "Software Engineer",
+    profileUrl: FarshadAvatar.src,
+    name: "Farshad",
+    role: "Director",
     linkedin: "https://www.linkedin.com/in/john-doe",
-    twitter: "https://twitter.com/john_doe",
-    dribble: "https://dribbble.com/john_doe",
   },
   {
-    profileUrl: "https://avatar.iran.liara.run/public/46", // Replace with actual profile URL
-    name: "Jane Doe",
-    role: "Designer",
+    profileUrl: PlaeholderAvatar.src,
+    name: "Prashanth",
+    role: "Director",
     linkedin: "https://www.linkedin.com/in/jane-doe",
-    twitter: "", // Optional social media link can be empty
-    dribble: "", // Optional social media link can be empty
   },
-  // Add more objects following the same structure (replace placeholders with actual data)
   {
-    profileUrl: "https://avatar.iran.liara.run/public/46", // Replace with actual profile URL
-    name: "Michael Smith",
-    role: "Marketing Manager",
+    profileUrl: PlaeholderAvatar.src,
+    name: "Rizwan",
+    role: "Director",
     linkedin: "https://www.linkedin.com/in/michael-smith",
-    twitter: "https://twitter.com/michael_mkt",
-    dribble: "", // Optional social media link can be empty
-  },
-  {
-    profileUrl: "https://avatar.iran.liara.run/public/46", // Replace with actual profile URL
-    name: "Emily Jones",
-    role: "Content Writer",
-    linkedin: "https://www.linkedin.com/in/emily-jones",
-    twitter: "", // Optional social media link can be empty
-    dribble: "", // Optional social media link can be empty
-  },
-  {
-    profileUrl: "https://avatar.iran.liara.run/public/46", // Replace with actual profile URL
-    name: "David Lee",
-    role: "Sales Representative",
-    linkedin: "https://www.linkedin.com/in/david-lee-sales",
-    twitter: "https://twitter.com/david_lee_sales",
-    dribble: "", // Optional social media link can be empty
-  },
-  {
-    profileUrl: "https://avatar.iran.liara.run/public/46", // Replace with actual profile URL
-    name: "Sarah Johnson",
-    role: "Human Resources",
-    linkedin: "https://www.linkedin.com/in/sarah-johnson-hr",
-    twitter: "", // Optional social media link can be empty
-    dribble: "", // Optional social media link can be empty
-  },
-  {
-    profileUrl: "https://avatar.iran.liara.run/public/46", // Replace with actual profile URL
-    name: "William Brown",
-    role: "Product Manager",
-    linkedin: "https://www.linkedin.com/in/william-brown-product",
-    twitter: "https://twitter.com/william_pm",
-    dribble: "", // Optional social media link can be empty
   },
 ];
 
@@ -138,7 +99,7 @@ function AboutUs() {
             />
           </div>
         </div>
-        <div >
+        <div>
           <h3 className="mb-[.8em]">Introducing our team</h3>
           <div className="flex gap-x-8 overflow-hidden">
             <Swiper
@@ -170,8 +131,6 @@ function AboutUs() {
                     name={member.name}
                     role={member.role}
                     linkedin={member.linkedin}
-                    twitter={member.twitter}
-                    dribble={member.dribble}
                   />
                 </SwiperSlide>
               ))}
@@ -180,7 +139,11 @@ function AboutUs() {
           <div className="flex justify-between mt-12">
             <div></div>
             <div className="flex gap-[15px]">
-              <Image className="prev-btn" src={PreviousBtn} alt={"Prev Button"} />
+              <Image
+                className="prev-btn"
+                src={PreviousBtn}
+                alt={"Prev Button"}
+              />
               <Image className="next-btn" src={NextBtn} alt={"Next Button"} />
             </div>
           </div>

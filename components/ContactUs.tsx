@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Image from "next/image";
 import IconEmail from "../public/ic_email.svg";
@@ -120,17 +120,19 @@ const ContactUsLeftPane = () => {
   );
 };
 
+const defaultFormData = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  countryCode: "",
+  phoneNumber: "",
+  interestedIn: "",
+  message: "",
+};
 const FormComponent = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    countryCode: "",
-    phoneNumber: "",
-    interestedIn: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState(defaultFormData);
 
+  const recaptchaRef = useRef<ReCAPTCHA | null>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitEnabled, setSubmitEnabled] = useState(false);
   const [state, handleSubmit] = useForm("xanwkkjr");
@@ -140,7 +142,6 @@ const FormComponent = () => {
   };
 
   const reCaptchaOnChange = (value: any) => {
-    console.log("Captcha value:", value);
     if (value) {
       setSubmitEnabled(true);
     }
@@ -149,6 +150,11 @@ const FormComponent = () => {
   useEffect(() => {
     if (state.succeeded) {
       setIsSubmitted(true);
+      setFormData(defaultFormData);
+      setSubmitEnabled(false);
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset();
+      }
     }
   }, [state]);
 
@@ -229,6 +235,7 @@ const FormComponent = () => {
       </div>
       <div className="flex flex-col gap-4">
         <ReCAPTCHA
+          ref={recaptchaRef}
           sitekey="6LfHYf0pAAAAAM0VVdPSwITD6H98UHJrXh0L0Kln"
           onChange={reCaptchaOnChange}
         />

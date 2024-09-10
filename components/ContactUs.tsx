@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Image from "next/image";
 import IconEmail from "../public/ic_email.svg";
@@ -14,7 +14,34 @@ import ArrowRight from "../public/arrow-right.svg";
 import { useForm, ValidationError } from "@formspree/react";
 
 const SubmittedComponent = () => {
-  return <></>;
+  return (
+    <div className="ml-4">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        viewBox="0 0 50 50"
+        className="checkmark"
+      >
+        <circle
+          cx="25"
+          cy="25"
+          r="20"
+          fill="none"
+          stroke="#4b8200"
+          strokeWidth="4"
+          className="circle"
+        />
+        <path
+          fill="none"
+          stroke="#4b8200"
+          strokeWidth="4"
+          d="M14 27l6 6 12-12"
+          className="tick"
+        />
+      </svg>
+    </div>
+  );
 };
 
 const ContactUsLeftPane = () => {
@@ -104,15 +131,9 @@ const FormComponent = () => {
     message: "",
   });
 
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitEnabled, setSubmitEnabled] = useState(false);
   const [state, handleSubmit] = useForm("xanwkkjr");
-
-  if (state.succeeded) {
-    console.log("state: ", state);
-    return <p>Thanks for joining!</p>;
-  } else {
-    console.log("state: ", state);
-  }
 
   const handleChange = (event: { target: { name: any; value: any } }) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -124,6 +145,12 @@ const FormComponent = () => {
       setSubmitEnabled(true);
     }
   };
+
+  useEffect(() => {
+    if (state.succeeded) {
+      setIsSubmitted(true);
+    }
+  }, [state]);
 
   return (
     <form
@@ -205,25 +232,30 @@ const FormComponent = () => {
           sitekey="6LfHYf0pAAAAAM0VVdPSwITD6H98UHJrXh0L0Kln"
           onChange={reCaptchaOnChange}
         />
-        <button
-          className="w-fit h-12 px-7 py-2 bg-[#4b8200] rounded-[44px] justify-center items-center gap-1 inline-flex"
-          type="submit"
-        >
-          <div className="p-1 justify-center items-center gap-2 flex">
-            <span className="text-white text-lg font-semibold font-['Figtree'] leading-normal tracking-wide">
-              Submit
-            </span>
-          </div>
-          <div className="w-6 h-6 relative">
-            <Image
-              className="default-icon"
-              src={ArrowRight}
-              alt="ArrowRight"
-              width="28"
-              height="28"
-            />
-          </div>
-        </button>
+        <div className="inline-flex items-center">
+          <button
+            className="w-fit h-12 px-7 py-2 bg-[#4b8200] rounded-[44px] justify-center items-center gap-1 inline-flex disabled:bg-slate-500"
+            disabled={!submitEnabled}
+            type="submit"
+          >
+            <div className="p-1 justify-center items-center gap-2 flex">
+              <span className="text-white text-lg font-semibold font-['Figtree'] leading-normal tracking-wide">
+                Submit
+              </span>
+            </div>
+            <div className="w-6 h-6 relative">
+              <Image
+                className="default-icon"
+                src={ArrowRight}
+                alt="ArrowRight"
+                width="28"
+                height="28"
+              />
+            </div>
+          </button>
+          {/* Tick animation after form submission */}
+          {isSubmitted && <SubmittedComponent />}
+        </div>
       </div>
     </form>
   );

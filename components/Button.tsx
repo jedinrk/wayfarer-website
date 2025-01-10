@@ -12,7 +12,14 @@ type ButtonProps = {
   height?: string;
 };
 
-const Button = ({ title, icon, disabled, variant, width, height }: ButtonProps) => {
+const Button = ({
+  title,
+  icon,
+  disabled,
+  variant,
+  width,
+  height,
+}: ButtonProps) => {
   return (
     <a
       href="#contact-us"

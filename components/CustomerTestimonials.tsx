@@ -28,7 +28,7 @@ const CustomerTestimonials: React.FC<{
               768: {
                 slidesPerView: 2,
                 spaceBetween: 64,
-              }
+              },
             }}
           >
             {testimonies.map((testimony, index) => (

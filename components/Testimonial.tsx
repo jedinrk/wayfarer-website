@@ -35,7 +35,7 @@ const Testimonial: React.FC<{ testimony: Testimony }> = ({ testimony }) => {
               className="h-14"
             />
           )}
-          <div >
+          <div>
             <h5 className="text-lg font-bold leading-[1.3]">{name}</h5>
             <h6 className="font-serif">{description}</h6>
           </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from 'swiper/modules';
+import { Navigation } from "swiper/modules";
 import "swiper/css";
 import AboutUsW from "../public/W-full.png";
 import AboutUsWTrans from "../public/W-transparent.png";
@@ -11,7 +11,7 @@ import PreviousBtn from "../public/btn-previous.svg";
 
 import FaisaalAvatar from "../public/faisaal.png";
 import FarshadAvatar from "../public/farshad.jpg";
-import PlaeholderAvatar from "../public/user.png"
+import PlaeholderAvatar from "../public/user.png";
 
 type Member = {
   profileUrl: string;

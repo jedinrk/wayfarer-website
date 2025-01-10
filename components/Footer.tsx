@@ -88,8 +88,10 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="w-full max-w-320 m-auto pt-8 pb-24 flex flex-col justify-start gap-2
-        md:flex-row md:items-center md:justify-center md:gap-6">
+      <div
+        className="w-full max-w-320 m-auto pt-8 pb-24 flex flex-col justify-start gap-2
+        md:flex-row md:items-center md:justify-center md:gap-6"
+      >
         <div className="text-slate-500 text-sm font-normal leading-normal opacity-45 mx-4 md:mx-0">
           2024 Wayfarer. All rights reserved.
         </div>

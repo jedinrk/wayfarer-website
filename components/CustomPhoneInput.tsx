@@ -10,7 +10,7 @@ import {
 import { styled } from "@mui/material/styles";
 
 interface CustomPhoneInputProps {
-  name: string
+  name: string;
   value: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
@@ -49,7 +49,7 @@ const CustomPhoneInput: React.FC<CustomPhoneInputProps> = ({
   const [countryCode, setCountryCode] = React.useState("+91");
 
   const handleCountryCodeChange = (
-    event: React.ChangeEvent<HTMLInputElement>
+    event: React.ChangeEvent<HTMLInputElement>,
   ) => {
     setCountryCode(event.target.value);
   };

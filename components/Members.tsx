@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import LinkedinIcon from "../public/linkedin-member.svg";
 
-
 interface MemberProps {
   profileUrl: string;
   name: string;

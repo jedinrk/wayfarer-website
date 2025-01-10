@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Button from "@/components/Button";
-import BannerImage from "../public/banner-image.png";
+import BannerImage from "../public/banner-image.webp";
 import BannerRightBg from "../public/banner-right-bg.png";
 import Link from "next/link";
 

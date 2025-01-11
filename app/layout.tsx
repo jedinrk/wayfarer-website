@@ -7,6 +7,7 @@ import { Figtree } from 'next/font/google'
 const figtree = Figtree({
   subsets: ['latin'],
 })
+
 export const metadata: Metadata = {
   title: "Wayfarer Logistics",
   description: "Sustainable Logistics for a Greener Future",

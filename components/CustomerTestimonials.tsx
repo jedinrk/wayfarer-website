@@ -8,7 +8,8 @@ const CustomerTestimonials: React.FC<{
   testimonies: Testimony[];
 }> = ({ testimonies }) => {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true });
+  const inView = useInView(ref, { once: true, margin: "-200px 0px" });
+
   return (
     <section
       id="testimonials"
@@ -34,7 +35,13 @@ const CustomerTestimonials: React.FC<{
           Client Stories: <br />
           Our Impact in Action
         </motion.h3>
-        <div className="mt-8 md:mt-12 xl:mt-20">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }}
+          className="mt-8 md:mt-12 xl:mt-20"
+        >
           <Swiper
             spaceBetween={64}
             slidesPerView={1}
@@ -53,7 +60,7 @@ const CustomerTestimonials: React.FC<{
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

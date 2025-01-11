@@ -43,7 +43,6 @@ const CustomTextField: React.FC<CustomTextFieldProps> = ({
         style: {
           color: "#6f859b",
           fontSize: "1.125rem", // Equivalent to text-lg
-          fontFamily: "Figtree",
         },
       }}
       InputProps={{

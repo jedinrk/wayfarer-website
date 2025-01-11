@@ -8,9 +8,9 @@ const CustomerTestimonials: React.FC<{
   return (
     <section
       id="testimonials"
-      className="w-full max-w-320 m-auto px-4 md:px-5 py-14 md:py-20 xl:py-28 flex flex-col"
+      className="bg-white w-full  m-auto  flex flex-col"
     >
-      <div className="w-full max-w-320 m-auto">
+      <div className="w-full max-w-320 px-4 md:px-5 py-14 md:py-20 xl:py-28 m-auto">
         <h2 className="uppercase text-theme-text-700 h6 mb-[.5em]">
           Customer testimonials
         </h2>

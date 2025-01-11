@@ -45,7 +45,7 @@ function Services() {
               <Image
                 src={ContainerTransport}
                 alt=""
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-[115%] duration-300 hover:rotate-3"
               />
               <div className="services-overlay absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
                 Container Transporting
@@ -55,7 +55,7 @@ function Services() {
               <Image
                 src={RefrigatedContainer}
                 alt=""
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-[115%] duration-300 hover:rotate-3"
               />
               <div className="services-overlay absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
                 Refrigerated container Transportation
@@ -70,7 +70,7 @@ function Services() {
               <Image
                 src={HeavyMachinery}
                 alt=""
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-[115%] duration-300 hover:rotate-3"
               />
               <div className="services-overlay absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
                 Heavy Machinery & Equipment Transportation
@@ -80,7 +80,7 @@ function Services() {
               <Image
                 src={ContainerSale}
                 alt=""
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-[115%] duration-300 hover:rotate-3"
               />
               <div className="services-overlay absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
                 Container Sale
@@ -95,7 +95,7 @@ function Services() {
               <Image
                 src={BulkCargo}
                 alt=""
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-[115%] duration-300 hover:rotate-3"
               />
               <div className="services-overlay absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
                 Bulk cargo movement
@@ -105,7 +105,7 @@ function Services() {
               <Image
                 src={ProjectCargo}
                 alt=""
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-[115%] duration-300 hover:rotate-3"
               />
               <div className="services-overlay absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
                 Project cargo Transportation

@@ -32,7 +32,7 @@ const Testimonial: React.FC<{ testimony: Testimony }> = ({ testimony }) => {
               alt={`${name}'s profile picture`}
               width={56}
               height={56}
-              className="h-14"
+              className="h-14 hover:border-4 border-theme-400 rounded-full duration-300"
             />
           )}
           <div>

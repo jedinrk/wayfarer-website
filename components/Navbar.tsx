@@ -10,6 +10,7 @@ import CloseIcon from "../public/ic_close.svg";
 import { useEffect, useState } from "react";
 import Button from "./Button";
 import clsx from "clsx";
+import { motion } from "motion/react";
 
 function Navbar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -39,12 +40,14 @@ function Navbar() {
   }
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
       className={clsx(
         "w-full bg-transparent top-0 left-0 z-30 px-4 md:px-5 2xl:px-12 py-3 md:py-4 lg:py-8 duration-300",
         {
-          "fixed backdrop-blur-lg bg-opacity-10  lg:py-4 shadow-md":
-            isScrolled,
+          "fixed backdrop-blur-lg bg-opacity-10  lg:py-4 shadow-md": isScrolled,
         },
         {
           "absolute ": !isScrolled,
@@ -111,7 +114,7 @@ function Navbar() {
           </ul>
         </div>
       </nav>
-    </div>
+    </motion.div>
   );
 }
 

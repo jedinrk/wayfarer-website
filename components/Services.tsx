@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import ContainerTransport from "../public/container-transport.jpg";
 import RefrigatedContainer from "../public/refrigated-container-transport.jpg";
@@ -7,20 +7,57 @@ import ContainerSale from "../public/container-sale.jpg";
 import BulkCargo from "../public/bulk-cargo.jpg";
 import ProjectCargo from "../public/project-cargo.webp";
 import GreenArrowRight from "../public/gg_arrow-right.svg";
+import { motion, useInView } from "motion/react";
 
+const serviceContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+const serviceItemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+const rowLeftVariants = {
+  hidden: { opacity: 0, x: 20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+};
+const rowRightVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+};
 function Services() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-200px 0px" });
   return (
     <section id="services" className="bg-theme-1000">
-      <div className="w-full max-w-320 m-auto px-4 md:px-5 py-14 md:py-20 xl:py-28 flex flex-col">
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={serviceContainerVariants}
+        transition={{ delay: 0.5 }}
+        className="w-full max-w-320 m-auto px-4 md:px-5 py-14 md:py-20 xl:py-28 flex flex-col"
+      >
         <div>
-          <h2 className="uppercase mb-[.5em] text-theme-text-700 h6">
+          <motion.h2
+            variants={serviceItemVariants}
+            className="uppercase mb-[.5em] text-theme-text-700 h6"
+          >
             services
-          </h2>
+          </motion.h2>
           <div className="flex flex-col lg:flex-row lg:justify-between">
-            <h3 className="h2 mb-3 lg:mb-0">
+            <motion.h3
+              variants={serviceItemVariants}
+              className="h2 mb-3 lg:mb-0"
+            >
               Green, efficient &<br /> reliable logistics
-            </h3>
-            <p className="max-w-[565px]">
+            </motion.h3>
+            <motion.p variants={serviceItemVariants} className="max-w-[565px]">
               At Wayfarer Logistics, our unwavering commitment to sustainability
               and operational excellence sets us apart in the logistics
               industry. We prioritize eco-friendly practices, utilizing advanced
@@ -33,11 +70,12 @@ function Services() {
               choice for businesses seeking top-tier logistics solutions. Trust
               Wayfarer Logistics to deliver not just your cargo, but also peace
               of mind.
-            </p>
+            </motion.p>
           </div>
         </div>
         <div className="flex flex-col w-full py-[56px] gap-y-8">
-          <div
+          <motion.div
+            variants={rowLeftVariants}
             id="rowOne"
             className="flex flex-col md:flex-row gap-y-8 md:gap-y-0 md:gap-x-8"
           >
@@ -61,8 +99,9 @@ function Services() {
                 Refrigerated container Transportation
               </div>
             </div>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            variants={rowRightVariants}
             id="rowTwo"
             className="flex flex-col md:flex-row gap-y-8 md:gap-y-0 md:gap-x-8"
           >
@@ -86,8 +125,9 @@ function Services() {
                 Container Sale
               </div>
             </div>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            variants={rowLeftVariants}
             id="rowThree"
             className="flex flex-col md:flex-row gap-y-8 md:gap-y-0 md:gap-x-8"
           >
@@ -111,19 +151,20 @@ function Services() {
                 Project cargo Transportation
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <button
+        <motion.button
+          variants={serviceItemVariants}
           onClick={() => (window.location.hash = "#contact-us")}
-          className="text-lime-700 bg-white font-semibold self-center w-fit px-8 py-2 rounded-[44px] border border-lime-700 flex justify-center items-center gap-2"
+          className="text-lime-700 bg-white font-semibold self-center w-fit px-8 py-2 rounded-[44px] border border-lime-700 flex justify-center items-center gap-4 hover:gap-2 duration-300 "
         >
           Let’s Talk
-          <div className="w-8 h-8 relative">
+          <div className="w-8 h-8 relative ">
             <Image src={GreenArrowRight} alt={"Green Arrow Right"} />
           </div>
-        </button>
-      </div>
+        </motion.button>
+      </motion.div>
     </section>
   );
 }

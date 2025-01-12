@@ -47,6 +47,7 @@ const CustomerTestimonials: React.FC<{
             slidesPerView={1}
             pagination={{ clickable: true }}
             navigation
+            autoplay={{ delay: 0.5, disableOnInteraction: false }}
             breakpoints={{
               768: {
                 slidesPerView: 2,
@@ -54,7 +55,7 @@ const CustomerTestimonials: React.FC<{
               },
             }}
           >
-            {testimonies.map((testimony, index) => (
+            {[...testimonies, ...testimonies].map((testimony, index) => (
               <SwiperSlide key={index}>
                 <Testimonial testimony={testimony} />
               </SwiperSlide>

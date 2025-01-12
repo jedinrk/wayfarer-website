@@ -14,7 +14,7 @@ interface MemberProps {
 
 function Members({ profileUrl, name, role, linkedin }: MemberProps) {
   return (
-    <div className="flex flex-col min-w-72 border-theme-400 items-center ">
+    <div className="flex flex-col  border-theme-400 items-center ">
       <Image
         src={profileUrl}
         alt={""}

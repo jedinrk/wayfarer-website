@@ -289,7 +289,7 @@ function ContactUs() {
     margin: "-200px 0px",
   });
   return (
-    <section id="contact-us" className="w-full">
+    <section id="contact-us" className="w-full bg-white">
       <div className="w-full max-w-320 m-auto px-4 md:px-5 py-14 md:py-20 xl:py-28">
         <div className="md:flex md:flex-col lg:flex-row items-center gap-16">
           <ContactUsLeftPane />

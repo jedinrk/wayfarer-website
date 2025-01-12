@@ -83,7 +83,7 @@ function Services() {
               <Image
                 src={ContainerTransport}
                 alt=""
-                className="w-full h-full object-cover hover:scale-[115%] duration-300 hover:rotate-3"
+                className="w-full h-full object-cover hover:scale-[115%] duration-300 hover:rotate-3 "
               />
               <div className="services-overlay absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
                 Container Transporting

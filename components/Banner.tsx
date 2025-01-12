@@ -5,12 +5,14 @@ import BannerImage from "../public/banner-image.webp";
 import BannerRightBg from "../public/banner-right-bg.png";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { delay } from "motion";
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
+      delay: 0.5,
       staggerChildren: 0.3,
     },
   },
@@ -53,9 +55,9 @@ function Banner() {
         </motion.div>
       </div>
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // transition={{ duration: 0.2, ease: "easeInOut" }}
       >
         <Image
           src={BannerImage}

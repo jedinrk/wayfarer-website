@@ -41,11 +41,11 @@ function Navbar() {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeInOut", spring: 0.5 }}
       className={clsx(
-        "w-full bg-transparent top-0 left-0 z-30 px-4 md:px-5 2xl:px-12 py-3 md:py-4 lg:py-8 duration-300",
+        "w-full bg-transparent top-0 left-0 z-30 px-4 md:px-5 2xl:px-12 py-3 md:py-4 lg:py-8 ",
         {
           "fixed backdrop-blur-lg bg-opacity-10  lg:py-4 shadow-md": isScrolled,
         },

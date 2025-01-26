@@ -79,21 +79,21 @@ function Services() {
             id="rowOne"
             className="flex flex-col md:flex-row gap-y-8 md:gap-y-0 md:gap-x-8"
           >
-            <div className="relative w-full md:w-[478px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl hover:shadow-3xl overflow-hidden hover:shadow-theme-1200">
+            <div className="relative w-full md:w-[478px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl hover:shadow-3xl overflow-hidden hover:shadow-theme-1200 duration-500">
               <Image
                 src={ContainerTransport}
                 alt=""
-                className="w-full h-full object-cover hover:scale-[115%] duration-300 hover:rotate-3 "
+                className="w-full h-full object-cover hover:scale-[105%] duration-500 "
               />
               <div className="services-overlay absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
                 Container Transporting
               </div>
             </div>
-            <div className="relative w-full md:w-[682px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl hover:shadow-3xl overflow-hidden hover:shadow-theme-1200">
+            <div className="relative w-full md:w-[682px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl hover:shadow-3xl overflow-hidden hover:shadow-theme-1200 duration-500">
               <Image
                 src={RefrigatedContainer}
                 alt=""
-                className="w-full h-full object-cover hover:scale-[115%] duration-300 hover:rotate-3"
+                className="w-full h-full object-cover hover:scale-[105%] duration-500"
               />
               <div className="services-overlay absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
                 Refrigerated container Transportation
@@ -105,21 +105,21 @@ function Services() {
             id="rowTwo"
             className="flex flex-col md:flex-row gap-y-8 md:gap-y-0 md:gap-x-8"
           >
-            <div className="relative w-full md:w-[762px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl hover:shadow-3xl overflow-hidden hover:shadow-theme-1200">
+            <div className="relative w-full md:w-[762px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl hover:shadow-3xl overflow-hidden hover:shadow-theme-1200 duration-500">
               <Image
                 src={HeavyMachinery}
                 alt=""
-                className="w-full h-full object-cover hover:scale-[115%] duration-300 hover:rotate-3"
+                className="w-full h-full object-cover hover:scale-[105%] duration-500"
               />
               <div className="services-overlay absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
                 Heavy Machinery & Equipment Transportation
               </div>
             </div>
-            <div className="relative w-full md:w-[398px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl hover:shadow-3xl overflow-hidden hover:shadow-theme-1200">
+            <div className="relative w-full md:w-[398px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl hover:shadow-3xl overflow-hidden hover:shadow-theme-1200 duration-500">
               <Image
                 src={ContainerSale}
                 alt=""
-                className="w-full h-full object-cover hover:scale-[115%] duration-300 hover:rotate-3"
+                className="w-full h-full object-cover hover:scale-[105%] duration-500"
               />
               <div className="services-overlay absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
                 Container Sale
@@ -131,21 +131,21 @@ function Services() {
             id="rowThree"
             className="flex flex-col md:flex-row gap-y-8 md:gap-y-0 md:gap-x-8"
           >
-            <div className="relative w-full md:w-[580px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl hover:shadow-3xl overflow-hidden hover:shadow-theme-1200">
+            <div className="relative w-full md:w-[580px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl hover:shadow-3xl overflow-hidden hover:shadow-theme-1200 duration-500">
               <Image
                 src={BulkCargo}
                 alt=""
-                className="w-full h-full object-cover hover:scale-[115%] duration-300 hover:rotate-3"
+                className="w-full h-full object-cover hover:scale-[105%] duration-500"
               />
               <div className="services-overlay absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
                 Bulk cargo movement
               </div>
             </div>
-            <div className="relative w-full md:w-[580px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl hover:shadow-3xl overflow-hidden hover:shadow-theme-1200">
+            <div className="relative w-full md:w-[580px] h-[261px] bg-cover bg-no-repeat bg-center rounded-3xl hover:shadow-3xl overflow-hidden hover:shadow-theme-1200 duration-500">
               <Image
                 src={ProjectCargo}
                 alt=""
-                className="w-full h-full object-cover hover:scale-[115%] duration-300 hover:rotate-3"
+                className="w-full h-full object-cover hover:scale-[105%] duration-500"
               />
               <div className="services-overlay absolute left-4 bottom-4 lg:left-6 lg:bottom-6 px-4 py-3 rounded-2xl bg-zinc-950 bg-opacity-70 text-white text-1xl font-semibold">
                 Project cargo Transportation

@@ -7,8 +7,14 @@ function Mission() {
   const [expanded, setExpanded] = useState(false);
   const headerRef = useRef(null);
   const paragraphRef = useRef(null);
-  const headerInView = useInView(headerRef, { once: true });
-  const paragraphInView = useInView(paragraphRef, { once: true });
+  const headerInView = useInView(headerRef, {
+    once: true,
+    margin: "-200px 0px",
+  });
+  const paragraphInView = useInView(paragraphRef, {
+    once: true,
+    margin: "-200px 0px",
+  });
 
   return (
     <section

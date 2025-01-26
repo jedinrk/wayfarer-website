@@ -18,7 +18,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
+      if (window.scrollY > 1) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -45,12 +45,13 @@ function Navbar() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut", spring: 0.5 }}
       className={clsx(
-        "w-full bg-transparent top-0 left-0 z-30 px-4 md:px-5 2xl:px-12 py-3 md:py-4 lg:py-8 ",
+        "w-full bg-transparent top-0 left-0 z-30 px-4 md:px-5 2xl:px-12 ",
         {
-          "fixed backdrop-blur-lg bg-opacity-10  lg:py-4 shadow-md": isScrolled,
+          "fixed backdrop-blur-lg bg-opacity-10 py-3 md:py-4 lg:py-4 shadow-sm duration-300":
+            isScrolled,
         },
         {
-          "absolute ": !isScrolled,
+          "absolute py-3 md:py-4 lg:py-8 ": !isScrolled,
         },
       )}
     >

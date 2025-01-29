@@ -1,16 +1,16 @@
-import React from 'react';
-import { TextField } from '@mui/material';
+import React from "react";
+import { TextField } from "@mui/material";
 
 interface CustomTextFieldProps {
   label: string;
   required?: boolean;
   fullWidth?: boolean;
-  color?: 'primary' | 'secondary' | 'success';
+  color?: "primary" | "secondary" | "success";
   name?: string;
   id?: string;
   value: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  variant?: 'standard' | 'filled' | 'outlined';
+  variant?: "standard" | "filled" | "outlined";
   className?: string;
   [key: string]: any; // Allow for additional props
 }
@@ -41,26 +41,25 @@ const CustomTextField: React.FC<CustomTextFieldProps> = ({
       variant={variant}
       InputLabelProps={{
         style: {
-          color: '#6f859b',
-          fontSize: '1.125rem', // Equivalent to text-lg
-          fontFamily: 'Figtree',
+          color: "#6f859b",
+          fontSize: "1.125rem", // Equivalent to text-lg
         },
       }}
       InputProps={{
         style: {
-          padding: '8px 0', // Equivalent to py-2
+          padding: "8px 0", // Equivalent to py-2
         },
       }}
       sx={{
-        '& .MuiInput-underline:before': {
-          borderBottomColor: '#caccd4', // Equivalent to border-[#caccd4]
+        "& .MuiInput-underline:before": {
+          borderBottomColor: "#caccd4", // Equivalent to border-[#caccd4]
         },
-        '& .MuiInput-underline:hover:before': {
-          borderBottomColor: '#caccd4',
+        "& .MuiInput-underline:hover:before": {
+          borderBottomColor: "#caccd4",
         },
-        '& .MuiInput-underline:after': {
-          borderBottomColor: '#4b8200',
-        }
+        "& .MuiInput-underline:after": {
+          borderBottomColor: "#4b8200",
+        },
       }}
       className={className}
       {...props}

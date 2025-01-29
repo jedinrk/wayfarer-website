@@ -1,10 +1,9 @@
-import React from 'react';
-
+import React from "react";
 
 const ContactUsBgLogo = () => {
   return (
     <svg width="478" height="453" viewBox="0 0 478 453" fill="none">
-      <g className='mix-blend-multiply'>
+      <g className="mix-blend-multiply">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -13,7 +12,14 @@ const ContactUsBgLogo = () => {
         />
       </g>
       <defs>
-        <linearGradient id="paint0_linear_1_1791" x1="153.459" y1="44.6554" x2="249.215" y2="459.296" gradientUnits="userSpaceOnUse">
+        <linearGradient
+          id="paint0_linear_1_1791"
+          x1="153.459"
+          y1="44.6554"
+          x2="249.215"
+          y2="459.296"
+          gradientUnits="userSpaceOnUse"
+        >
           <stop stopColor="#EDF4E7" />
           <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>

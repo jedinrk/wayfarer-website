@@ -12,6 +12,7 @@ import Button from "./Button";
 import ArrowRight from "../public/arrow-right.svg";
 
 import { useForm, ValidationError } from "@formspree/react";
+import { motion, useInView } from "motion/react";
 
 const SubmittedComponent = () => {
   return (
@@ -45,8 +46,21 @@ const SubmittedComponent = () => {
 };
 
 const ContactUsLeftPane = () => {
+  const contactLeftRef = useRef(null);
+  const contactLeftInView = useInView(contactLeftRef, {
+    once: true,
+    margin: "-200px 0px",
+  });
   return (
-    <div className="rounded-3xl overflow-hidden relative">
+    <motion.div
+      ref={contactLeftRef}
+      initial={{ opacity: 0, x: -20 }}
+      animate={
+        contactLeftInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
+      }
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      className="rounded-3xl overflow-hidden relative"
+    >
       <Image
         src={ContactUsBg}
         alt="Contact Us Background"
@@ -116,7 +130,7 @@ const ContactUsLeftPane = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -246,7 +260,7 @@ const FormComponent = () => {
             type="submit"
           >
             <div className="p-1 justify-center items-center gap-2 flex">
-              <span className="text-white text-lg font-semibold font-['Figtree'] leading-normal tracking-wide">
+              <span className="text-white text-lg font-semibold  leading-normal tracking-wide">
                 Submit
               </span>
             </div>
@@ -269,14 +283,27 @@ const FormComponent = () => {
 };
 
 function ContactUs() {
+  const contactUsRef = useRef(null);
+  const contactUsInView = useInView(contactUsRef, {
+    once: true,
+    margin: "-200px 0px",
+  });
   return (
-    <section id="contact-us" className="w-full">
+    <section id="contact-us" className="w-full bg-white">
       <div className="w-full max-w-320 m-auto px-4 md:px-5 py-14 md:py-20 xl:py-28">
         <div className="md:flex md:flex-col lg:flex-row items-center gap-16">
           <ContactUsLeftPane />
-          <div className="lg:flex-1 mt-12 md:mt-16 lg:mt-0">
+          <motion.div
+            ref={contactUsRef}
+            initial={{ opacity: 0, x: 20 }}
+            animate={
+              contactUsInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
+            }
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="lg:flex-1 mt-12 md:mt-16 lg:mt-0"
+          >
             <FormComponent />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

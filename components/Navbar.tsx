@@ -9,9 +9,27 @@ import MenuIcon from "../public/menu-icon.svg";
 import CloseIcon from "../public/ic_close.svg";
 import { useEffect, useState } from "react";
 import Button from "./Button";
+import clsx from "clsx";
+import { motion } from "motion/react";
 
 function Navbar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 1) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   function handleMenuClick(event: any): void {
     setMenuOpen(true);
@@ -22,7 +40,21 @@ function Navbar() {
   }
 
   return (
-    <div className="absolute z-30 w-full px-4 md:px-5 2xl:px-12 py-3 md:py-4 lg:py-8">
+    <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeInOut", spring: 0.5 }}
+      className={clsx(
+        "w-full bg-transparent top-0 left-0 z-30 px-4 md:px-5 2xl:px-12 ",
+        {
+          "fixed backdrop-blur-lg bg-opacity-10 py-3 md:py-4 lg:py-4 shadow-sm duration-300":
+            isScrolled,
+        },
+        {
+          "absolute py-3 md:py-4 lg:py-8 ": !isScrolled,
+        },
+      )}
+    >
       <nav className="flex justify-between items-center w-full m-auto">
         {/* Logo */}
         <Link href="/" className="hidden md:block md:w-[334px] md:h-[58px]">
@@ -83,7 +115,7 @@ function Navbar() {
           </ul>
         </div>
       </nav>
-    </div>
+    </motion.div>
   );
 }
 

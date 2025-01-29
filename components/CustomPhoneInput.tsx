@@ -10,7 +10,7 @@ import {
 import { styled } from "@mui/material/styles";
 
 interface CustomPhoneInputProps {
-  name: string
+  name: string;
   value: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
@@ -38,7 +38,6 @@ const CustomTextFieldBox = styled(Box)(({ theme }) => ({
   flexGrow: 1, // Expand to fill available space
   color: "#6f859b",
   fontSize: "1.125rem",
-  fontFamily: "Figtree",
 }));
 
 const CustomPhoneInput: React.FC<CustomPhoneInputProps> = ({
@@ -49,7 +48,7 @@ const CustomPhoneInput: React.FC<CustomPhoneInputProps> = ({
   const [countryCode, setCountryCode] = React.useState("+91");
 
   const handleCountryCodeChange = (
-    event: React.ChangeEvent<HTMLInputElement>
+    event: React.ChangeEvent<HTMLInputElement>,
   ) => {
     setCountryCode(event.target.value);
   };
@@ -77,9 +76,9 @@ const CustomPhoneInput: React.FC<CustomPhoneInputProps> = ({
               sx={{
                 color: "#1a282b",
                 fontSize: "1.125rem", // Equivalent to text-lg
-                fontFamily: "Figtree",
                 "& .MuiSelect-icon": { display: "none" }, // Hides the arrow icon
               }}
+              className="mt-0"
             >
               <MenuItem value="+91">+91</MenuItem>
               <MenuItem value="+1">+1</MenuItem>

@@ -12,11 +12,18 @@ type ButtonProps = {
   height?: string;
 };
 
-const Button = ({ title, icon, disabled, variant, width, height }: ButtonProps) => {
+const Button = ({
+  title,
+  icon,
+  disabled,
+  variant,
+  width,
+  height,
+}: ButtonProps) => {
   return (
     <a
       href="#contact-us"
-      className={`button ${variant && variant}
+      className={`button duration-300 hover:drop-shadow-md ${variant && variant}
         ${icon ? "py-[.5em]" : "py-[.375em]"}`}
     >
       {title}

@@ -14,7 +14,7 @@ const InterestCheckbox: React.FC<InterestCheckboxProps> = ({
 }) => {
   return (
     <div className="flex-col justify-start items-start gap-4 inline-flex">
-      <div className="text-[#1a282b] text-lg font-normal font-['Figtree'] leading-normal">
+      <div className="text-[#1a282b] text-lg font-normal leading-normal">
         I’m interested in
       </div>
       <div className="justify-start items-center gap-10 inline-flex ml-2">

@@ -34,7 +34,7 @@ const config: Config = {
         'theme-1000': '#FCF2E0',
         'theme-1100': '#E1E99B',
         'theme-1200': '#ACDA6D',
-        'theme-1300': '#E4ECAA',
+        'theme-1300': '#E0E99A',
         'theme-text-100': '#6F859B',
         'theme-text-300': '#ADD356',
         'theme-text-700': '#4B8200',

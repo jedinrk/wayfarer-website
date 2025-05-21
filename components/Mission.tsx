@@ -5,6 +5,7 @@ import { motion, useInView } from "motion/react";
 function Mission() {
   const headerRef = useRef(null);
   const paragraphRef = useRef(null);
+  const taglineRef = useRef(null);
   
   const headerInView = useInView(headerRef, {
     once: true,
@@ -14,6 +15,11 @@ function Mission() {
   const paragraphInView = useInView(paragraphRef, {
     once: true,
     margin: "-200px 0px",
+  });
+  
+  const taglineInView = useInView(taglineRef, {
+    once: true,
+    margin: "-100px 0px",
   });
 
   return (
@@ -29,8 +35,11 @@ function Mission() {
           
           {/* Tagline */}
           <motion.div 
+            ref={taglineRef}
             initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            animate={
+              taglineInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
+            }
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative z-20 px-6 flex flex-col"
           >

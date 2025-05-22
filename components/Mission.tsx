@@ -25,12 +25,12 @@ function Mission() {
   return (
     <section
       id="mission"
-      className="w-full bg-theme-900/30 relative overflow-hidden min-h-[80vh]"
+      className="w-full bg-theme-900/30 relative overflow-hidden"
     >
       {/* Two-panel layout */}
-      <div className="w-full max-w-320 m-auto relative z-10 flex flex-col md:flex-row min-h-[80vh]">
+      <div className="w-full max-w-320 m-auto relative z-10 flex flex-col md:flex-row px-4 md:px-5 py-14 md:py-20">
         {/* Left Panel (60%) - Image with tagline overlay */}
-        <div className="w-full md:w-[60%] relative min-h-[50vh] md:min-h-[80vh] flex items-center">
+        <div className="w-full md:w-[60%] relative mb-8 md:mb-0 flex items-center">
           <div className="absolute inset-0 z-10"></div>
           
           {/* Tagline */}
@@ -41,7 +41,7 @@ function Mission() {
               taglineInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
             }
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative z-20 px-6 flex flex-col"
+            className="relative z-20 flex flex-col"
           >
             <h1 className="mb-[.44em]">
               <span className="block text-green-500">
@@ -54,9 +54,9 @@ function Mission() {
           </motion.div>
         </div>
         
-        {/* Right Panel (40%) - Mission text in scrollable card */}
-        <div className="w-full md:w-[40%] p-6 md:p-0 flex items-center">
-          <div className=" rounded-lg p-8 md:p-12 max-h-[70vh] overflow-y-auto">
+        {/* Right Panel (40%) - Mission text */}
+        <div className="w-full md:w-[40%] flex items-start">
+          <div className="rounded-lg">
             <motion.h2
               ref={headerRef}
               initial={{ opacity: 0, y: -20 }}
